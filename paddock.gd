@@ -1,7 +1,7 @@
 extends Area2D
 
-@export var animal_type = "Souris"
-@export var animal_count = 5
+@export_enum("Souris", "Fromage") var animal_type := "Souris"
+@export var animal_count := 5
 
 var current_count = 0
 @onready var label = $Label

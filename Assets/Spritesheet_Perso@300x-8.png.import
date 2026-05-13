@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crl78irxpddj0"
-path="res://.godot/imported/Perso_Rouge_Face_Chat@300x-8.png-fd546d359491ce78c21639c02204f6f8.ctex"
+uid="uid://cjui6oh8brq1n"
+path="res://.godot/imported/Spritesheet_Perso@300x-8.png-e28b67f8e20812958cb34d960b7d0ce2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Perso_Rouge_Face_Chat@300x-8.png"
-dest_files=["res://.godot/imported/Perso_Rouge_Face_Chat@300x-8.png-fd546d359491ce78c21639c02204f6f8.ctex"]
+source_file="res://Assets/Spritesheet_Perso@300x-8.png"
+dest_files=["res://.godot/imported/Spritesheet_Perso@300x-8.png-e28b67f8e20812958cb34d960b7d0ce2.ctex"]
 
 [params]
 
