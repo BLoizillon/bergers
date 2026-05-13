@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://dc53wxkoxvxgp"]
+
+[ext_resource type="PackedScene" uid="uid://br42s7j4mbp0b" path="res://player.tscn" id="1_15wb7"]
+[ext_resource type="PackedScene" uid="uid://cbdv820rg3who" path="res://animals.tscn" id="5_s77qv"]
+[ext_resource type="Texture2D" uid="uid://ddcyg7o4tcomo" path="res://Assets/Herbe_1@300x-8.png" id="6_5hnhx"]
+[ext_resource type="Texture2D" uid="uid://ciqljjshkxsoq" path="res://Assets/Herbe_2@300x-8.png" id="7_78pok"]
+[ext_resource type="PackedScene" uid="uid://ceyis8w3cd1eq" path="res://mask.tscn" id="8_lvfll"]
+[ext_resource type="Script" uid="uid://c3gd2afgti2yh" path="res://victory.gd" id="9_jcnlr"]
+
+[node name="Level2" type="Node2D" unique_id=1801627583]
+
+[node name="Player1" parent="." unique_id=981124934 instance=ExtResource("1_15wb7")]
+position = Vector2(145, 193)
+
+[node name="Player2" parent="." unique_id=1094857113 instance=ExtResource("1_15wb7")]
+position = Vector2(808, 441)
+player_id = 1
+
+[node name="GrpWall" type="Node" parent="." unique_id=472281946]
+
+[node name="GrpPNJ" type="Node" parent="." unique_id=1839669559]
+
+[node name="Animals1" parent="GrpPNJ" unique_id=409801974 instance=ExtResource("5_s77qv")]
+position = Vector2(384, 200)
+
+[node name="Animals2" parent="GrpPNJ" unique_id=397309686 instance=ExtResource("5_s77qv")]
+position = Vector2(496, 400)
+animal_type = "Fromage"
+
+[node name="Animals3" parent="GrpPNJ" unique_id=2146688313 instance=ExtResource("5_s77qv")]
+position = Vector2(280, 432)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals3" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="GrpBckground" type="Node" parent="." unique_id=363279919]
+
+[node name="Herbe1_300x8" type="Sprite2D" parent="GrpBckground" unique_id=644038217]
+z_index = -1
+position = Vector2(188.5, 138.50002)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_5hnhx")
+
+[node name="Herbe2_300x8" type="Sprite2D" parent="GrpBckground" unique_id=943249552]
+z_index = -1
+position = Vector2(578.5, 138.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_78pok")
+
+[node name="Herbe1_300x9" type="Sprite2D" parent="GrpBckground" unique_id=1447941898]
+z_index = -1
+position = Vector2(188.5, 519.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_5hnhx")
+
+[node name="Herbe2_300x9" type="Sprite2D" parent="GrpBckground" unique_id=1468612175]
+z_index = -1
+position = Vector2(578.5, 519.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_78pok")
+
+[node name="Herbe1_300x10" type="Sprite2D" parent="GrpBckground" unique_id=1330737313]
+z_index = -1
+position = Vector2(965.99994, 140.00003)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_5hnhx")
+
+[node name="Herbe2_300x10" type="Sprite2D" parent="GrpBckground" unique_id=1898562127]
+z_index = -1
+position = Vector2(968.50006, 529.50006)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_78pok")
+
+[node name="GrpMask" type="Node" parent="." unique_id=246134304]
+
+[node name="Mask1" parent="GrpMask" unique_id=239077444 instance=ExtResource("8_lvfll")]
+position = Vector2(666, 236)
+
+[node name="Mask2" parent="GrpMask" unique_id=1346918696 instance=ExtResource("8_lvfll")]
+position = Vector2(139, 401)
+mask_type = "Souris"
+
+[node name="Sprite2D" parent="GrpMask/Mask2" index="0" unique_id=1579870222]
+frame = 1
+
+[node name="GrpPaddock" type="Node" parent="." unique_id=255059525]
+script = ExtResource("9_jcnlr")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1297321393]
+visible = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=151970605]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_font_sizes/normal_font_size = 128
+bbcode_enabled = true
+text = "[wave]VICTORY!!![/wave]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1705398788]
+offset_top = 129.0
+offset_right = 1152.0
+offset_bottom = 648.0
+text = "space to next level"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[editable path="GrpPNJ/Animals1"]
+[editable path="GrpPNJ/Animals2"]
+[editable path="GrpPNJ/Animals3"]
+[editable path="GrpMask/Mask2"]
