@@ -1,6 +1,6 @@
 extends Node
 
-@onready var canvas_layer: CanvasLayer = $"../CanvasLayer"
+@onready var canvas_layer: CanvasLayer = %VictoryScreen
 @export var next_level_path = ""
 @onready var next_level = load(next_level_path)
 var victory := false

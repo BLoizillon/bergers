@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bmlqc2nu0cevj" path="res://Walls/wall_square.tscn" id="5_j7kpp"]
 [ext_resource type="Texture2D" uid="uid://ddcyg7o4tcomo" path="res://Assets/Herbe_1@300x-8.png" id="7_bjebc"]
 [ext_resource type="Texture2D" uid="uid://ciqljjshkxsoq" path="res://Assets/Herbe_2@300x-8.png" id="8_5rr72"]
+[ext_resource type="PackedScene" uid="uid://b1omdphlq8qax" path="res://canvas_layer.tscn" id="8_bjebc"]
 
 [node name="Level1" type="Node2D" unique_id=1801627583]
 
@@ -181,5 +182,9 @@ z_index = -1
 position = Vector2(968.50006, 529.50006)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("8_5rr72")
+
+[node name="VictoryScreen" parent="." unique_id=186024796 instance=ExtResource("8_bjebc")]
+unique_name_in_owner = true
+visible = false
 
 [editable path="Paddock"]
