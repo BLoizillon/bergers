@@ -112,4 +112,17 @@ position = Vector2(968.50006, 529.50006)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("8_5rr72")
 
+[node name="Paddock2" parent="." unique_id=721670698 instance=ExtResource("3_hn12h")]
+position = Vector2(112, 546)
+
+[node name="Label" parent="Paddock2" index="0" unique_id=1547415217]
+offset_left = -39.0
+offset_top = 84.0
+offset_right = 57.0
+offset_bottom = 121.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Paddock2" unique_id=233005203]
+polygon = PackedVector2Array(15, -110, 185, -49, 117, 81, -79, 75, -78, -214, 139, -234)
+
 [editable path="Paddock"]
+[editable path="Paddock2"]
