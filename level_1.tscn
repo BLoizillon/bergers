@@ -9,27 +9,16 @@
 [ext_resource type="Texture2D" uid="uid://ddcyg7o4tcomo" path="res://Assets/Herbe_1@300x-8.png" id="7_bjebc"]
 [ext_resource type="Texture2D" uid="uid://ciqljjshkxsoq" path="res://Assets/Herbe_2@300x-8.png" id="8_5rr72"]
 [ext_resource type="PackedScene" uid="uid://ceyis8w3cd1eq" path="res://mask.tscn" id="9_5rr72"]
+[ext_resource type="Script" uid="uid://c3gd2afgti2yh" path="res://victory.gd" id="9_gyffv"]
 
 [node name="Level1" type="Node2D" unique_id=1801627583]
 
 [node name="Player1" parent="." unique_id=981124934 instance=ExtResource("1_3hls8")]
-position = Vector2(161, 174)
+position = Vector2(145, 193)
 
 [node name="Player2" parent="." unique_id=1094857113 instance=ExtResource("1_3hls8")]
 position = Vector2(808, 441)
 player_id = 1
-
-[node name="Paddock" parent="." unique_id=1888835191 instance=ExtResource("3_hn12h")]
-position = Vector2(896, 64)
-
-[node name="Label" parent="Paddock" index="0" unique_id=1547415217]
-offset_left = 42.0
-offset_top = -49.0
-offset_right = 138.0
-offset_bottom = -12.0
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Paddock" unique_id=131125346]
-polygon = PackedVector2Array(0, 0, 192, 0, 192, 192, 0, 192)
 
 [node name="GrpWall" type="Node" parent="." unique_id=472281946]
 
@@ -130,8 +119,45 @@ mask_type = "Souris"
 [node name="Sprite2D" parent="GrpMask/Mask2" index="0" unique_id=1579870222]
 frame = 1
 
-[editable path="Paddock"]
+[node name="GrpPaddock" type="Node" parent="." unique_id=255059525]
+script = ExtResource("9_gyffv")
+next_level_path = "res://level_2.tscn"
+
+[node name="Paddock" parent="GrpPaddock" unique_id=1888835191 instance=ExtResource("3_hn12h")]
+position = Vector2(896, 64)
+animal_count = 1
+
+[node name="Label" parent="GrpPaddock/Paddock" index="0" unique_id=1547415217]
+offset_left = 42.0
+offset_top = -49.0
+offset_right = 138.0
+offset_bottom = -12.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GrpPaddock/Paddock" unique_id=131125346]
+polygon = PackedVector2Array(0, 0, 192, 0, 192, 192, 0, 192)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1297321393]
+visible = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=151970605]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_font_sizes/normal_font_size = 128
+bbcode_enabled = true
+text = "[wave]VICTORY!!![/wave]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1705398788]
+offset_top = 129.0
+offset_right = 1152.0
+offset_bottom = 648.0
+text = "space to next level"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [editable path="GrpPNJ/Animals1"]
 [editable path="GrpPNJ/Animals2"]
 [editable path="GrpPNJ/Animals3"]
 [editable path="GrpMask/Mask2"]
+[editable path="GrpPaddock/Paddock"]
