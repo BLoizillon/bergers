@@ -11,11 +11,13 @@
 [node name="Level1" type="Node2D" unique_id=1801627583]
 
 [node name="Player1" parent="." unique_id=981124934 instance=ExtResource("1_3hls8")]
-position = Vector2(167, 335)
+position = Vector2(55, 600)
+animal_type = "Chat"
 
 [node name="Player2" parent="." unique_id=1094857113 instance=ExtResource("1_3hls8")]
-position = Vector2(808, 441)
-player_id = 2
+position = Vector2(1106, 623)
+player_id = 1
+animal_type = "Chat"
 
 [node name="Paddock" parent="." unique_id=1888835191 instance=ExtResource("3_hn12h")]
 position = Vector2(320, 32)
