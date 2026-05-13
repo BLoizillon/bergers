@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://nek4swqwefhw"]
+
+[ext_resource type="Script" uid="uid://dl5jsykhg6cwu" path="res://paddock.gd" id="1_tirl4"]
+
+[node name="Paddock" type="Area2D" unique_id=1888835191]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_tirl4")
+
+[node name="Label" type="RichTextLabel" parent="." unique_id=1547415217]
+offset_left = -48.0
+offset_top = -32.0
+offset_right = 48.0
+offset_bottom = 5.0
+theme_override_colors/default_color = Color(0.026886126, 0.32405975, 0, 1)
+theme_override_font_sizes/normal_font_size = 27
+bbcode_enabled = true
+text = "Default"
+horizontal_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

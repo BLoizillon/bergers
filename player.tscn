@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://br42s7j4mbp0b"]
+
+[ext_resource type="Script" uid="uid://bjdnhp6hytexe" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://dd34afshy03bt" path="res://Assets/Perso_Bleu_Face@300x-8.png" id="2_onrkg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onrkg"]
+height = 48.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i3pqv"]
+radius = 80.0
+
+[node name="Player" type="CharacterBody2D" unique_id=981124934]
+z_index = 1
+collision_mask = 4
+motion_mode = 1
+floor_stop_on_slope = false
+floor_constant_speed = true
+floor_block_on_wall = false
+floor_max_angle = 3.1415927
+floor_snap_length = 0.0
+script = ExtResource("1_onrkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=288984850]
+scale = Vector2(0.15496369, 0.15496364)
+texture = ExtResource("2_onrkg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=743118335]
+position = Vector2(0, 48)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_onrkg")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1804533263]
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2015886182]
+position = Vector2(0, 48)
+shape = SubResource("CircleShape2D_i3pqv")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1720702875]
+visible = false
+offset_left = -64.0
+offset_top = 40.0
+offset_right = 64.0
+offset_bottom = 56.0
+show_percentage = false
+
+[connection signal="body_exited" from="Area2D" to="." method="_on_body_exited"]

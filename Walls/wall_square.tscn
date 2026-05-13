@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bmlqc2nu0cevj"]
+
+[ext_resource type="Texture2D" uid="uid://dff0vxanu2xtj" path="res://Assets/Enclos_entrée@300x-8.png" id="1_824d2"]
+
+[node name="WallSquare" type="StaticBody2D" unique_id=1628722522]
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=616654045]
+position = Vector2(-1.9073486e-06, 0)
+scale = Vector2(0.115, 0.115)
+texture = ExtResource("1_824d2")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=366682762]
+polygon = PackedVector2Array(0, -16, 16, -16, 16, 16, -16, 16, -16, -16)

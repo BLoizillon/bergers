@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bxdgvp5u74kxi"]
+
+[ext_resource type="Texture2D" uid="uid://ntwcjnc82dxx" path="res://Assets/Enclos_2@300x-8.png" id="1_7i1ca"]
+
+[node name="WallRight" type="StaticBody2D" unique_id=1628722522]
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=616654045]
+position = Vector2(-1.9073486e-06, 0)
+scale = Vector2(0.115, 0.115)
+texture = ExtResource("1_7i1ca")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=366682762]
+polygon = PackedVector2Array(0, -12, 0, -12, 52, -12, 27, 12, -52, 12, -28, -12)
