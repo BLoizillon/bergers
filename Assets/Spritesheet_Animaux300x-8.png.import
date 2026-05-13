@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgpopvp473wx6"
-path="res://.godot/imported/Perso_Rouge_Dos@300x-8.png-6948d8785d5d9858a7c41e13eecb7fef.ctex"
+uid="uid://db4e4t8o07iw0"
+path="res://.godot/imported/Spritesheet_Animaux300x-8.png-77d7a9e0621e3226be3d1940a937f4be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Perso_Rouge_Dos@300x-8.png"
-dest_files=["res://.godot/imported/Perso_Rouge_Dos@300x-8.png-6948d8785d5d9858a7c41e13eecb7fef.ctex"]
+source_file="res://Assets/Spritesheet_Animaux300x-8.png"
+dest_files=["res://.godot/imported/Spritesheet_Animaux300x-8.png-77d7a9e0621e3226be3d1940a937f4be.ctex"]
 
 [params]
 

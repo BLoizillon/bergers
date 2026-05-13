@@ -1,13 +1,17 @@
 [gd_scene format=3 uid="uid://br42s7j4mbp0b"]
 
 [ext_resource type="Script" uid="uid://bjdnhp6hytexe" path="res://player.gd" id="1_onrkg"]
-[ext_resource type="Texture2D" uid="uid://dd34afshy03bt" path="res://Assets/Perso_Bleu_Face@300x-8.png" id="2_onrkg"]
+[ext_resource type="Texture2D" uid="uid://cjui6oh8brq1n" path="res://Assets/Spritesheet_Perso@300x-8.png" id="2_onrkg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onrkg"]
 height = 48.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i3pqv"]
 radius = 80.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3pqv"]
+radius = 16.0
+height = 64.0
 
 [node name="Player" type="CharacterBody2D" unique_id=981124934]
 z_index = 1
@@ -21,11 +25,13 @@ floor_snap_length = 0.0
 script = ExtResource("1_onrkg")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=288984850]
+position = Vector2(3.999999, -47.999996)
 scale = Vector2(0.15496369, 0.15496364)
 texture = ExtResource("2_onrkg")
+hframes = 6
+vframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=743118335]
-position = Vector2(0, 48)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_onrkg")
 
@@ -33,15 +39,23 @@ shape = SubResource("CapsuleShape2D_onrkg")
 collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2015886182]
-position = Vector2(0, 48)
 shape = SubResource("CircleShape2D_i3pqv")
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=1720702875]
 visible = false
 offset_left = -64.0
-offset_top = 40.0
+offset_top = 16.0
 offset_right = 64.0
-offset_bottom = 56.0
+offset_bottom = 32.0
 show_percentage = false
 
+[node name="AreaMask" type="Area2D" parent="." unique_id=2011190220]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaMask" unique_id=392627037]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_i3pqv")
+
 [connection signal="body_exited" from="Area2D" to="." method="_on_body_exited"]
+[connection signal="area_entered" from="AreaMask" to="." method="_on_mask_area_entered"]
