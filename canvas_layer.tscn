@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b1omdphlq8qax"]
+
+[node name="VictoryScreen" type="CanvasLayer" unique_id=186024796]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=250761103]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_font_sizes/normal_font_size = 128
+bbcode_enabled = true
+text = "[wave]VICTORY!![wave]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=1794124142]
+offset_top = 136.0
+offset_right = 1152.0
+offset_bottom = 648.0
+text = "space to next level"
+horizontal_alignment = 1
+vertical_alignment = 1
