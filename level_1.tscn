@@ -3,71 +3,146 @@
 [ext_resource type="PackedScene" uid="uid://br42s7j4mbp0b" path="res://player.tscn" id="1_3hls8"]
 [ext_resource type="PackedScene" uid="uid://cbdv820rg3who" path="res://animals.tscn" id="2_hbghi"]
 [ext_resource type="PackedScene" uid="uid://nek4swqwefhw" path="res://paddock.tscn" id="3_hn12h"]
-[ext_resource type="PackedScene" uid="uid://d1c77a2uaj8vi" path="res://Walls/wall_left.tscn" id="4_5hph3"]
 [ext_resource type="PackedScene" uid="uid://6i0c52ervcle" path="res://Walls/wall_basic.tscn" id="4_ihfcg"]
 [ext_resource type="PackedScene" uid="uid://bmlqc2nu0cevj" path="res://Walls/wall_square.tscn" id="5_j7kpp"]
 [ext_resource type="Texture2D" uid="uid://ddcyg7o4tcomo" path="res://Assets/Herbe_1@300x-8.png" id="7_bjebc"]
 [ext_resource type="Texture2D" uid="uid://ciqljjshkxsoq" path="res://Assets/Herbe_2@300x-8.png" id="8_5rr72"]
-[ext_resource type="PackedScene" uid="uid://ceyis8w3cd1eq" path="res://mask.tscn" id="9_5rr72"]
-[ext_resource type="Script" uid="uid://c3gd2afgti2yh" path="res://victory.gd" id="9_gyffv"]
 
 [node name="Level1" type="Node2D" unique_id=1801627583]
 
 [node name="Player1" parent="." unique_id=981124934 instance=ExtResource("1_3hls8")]
-position = Vector2(145, 193)
+position = Vector2(55, 600)
+animal_type = "Chat"
 
 [node name="Player2" parent="." unique_id=1094857113 instance=ExtResource("1_3hls8")]
-position = Vector2(808, 441)
+position = Vector2(1106, 623)
 player_id = 1
+animal_type = "Chat"
+
+[node name="Paddock" parent="." unique_id=1888835191 instance=ExtResource("3_hn12h")]
+position = Vector2(320, 32)
+animal_count = 4
+
+[node name="Label" parent="Paddock" index="0" unique_id=1547415217]
+offset_left = 523.0
+offset_top = 142.0
+offset_right = 619.0
+offset_bottom = 179.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Paddock" unique_id=131125346]
+polygon = PackedVector2Array(0, 0, 508, 0, 509, 192, 0, 192)
 
 [node name="GrpWall" type="Node" parent="." unique_id=472281946]
 
 [node name="WallBasic1" parent="GrpWall" unique_id=1628722522 instance=ExtResource("4_ihfcg")]
-position = Vector2(1032, 64)
+position = Vector2(574, 20)
 
-[node name="WallBasic2" parent="GrpWall" unique_id=1947972819 instance=ExtResource("4_ihfcg")]
-position = Vector2(1083, 194)
-rotation = 1.5707964
+[node name="WallBasic7" parent="GrpWall" unique_id=2113707471 instance=ExtResource("4_ihfcg")]
+position = Vector2(775, 20)
 
-[node name="WallBasic3" parent="GrpWall" unique_id=1091683760 instance=ExtResource("4_ihfcg")]
-position = Vector2(953, 245)
+[node name="WallBasic8" parent="GrpWall" unique_id=1535020961 instance=ExtResource("4_ihfcg")]
+position = Vector2(371, 20)
+
+[node name="WallBasic5" parent="GrpWall" unique_id=1971036460 instance=ExtResource("4_ihfcg")]
+position = Vector2(675, 20)
 rotation = 3.1415927
 
+[node name="WallBasic6" parent="GrpWall" unique_id=1472222818 instance=ExtResource("4_ihfcg")]
+position = Vector2(473, 20)
+rotation = 3.1415927
+
+[node name="WallBasic3" parent="GrpWall" unique_id=526792811 instance=ExtResource("4_ihfcg")]
+position = Vector2(77, 226)
+
+[node name="WallBasic11" parent="GrpWall" unique_id=1301021115 instance=ExtResource("4_ihfcg")]
+position = Vector2(278, 226)
+
+[node name="WallBasic15" parent="GrpWall" unique_id=1148512124 instance=ExtResource("4_ihfcg")]
+position = Vector2(178, 226)
+rotation = 3.1415927
+
+[node name="WallBasic16" parent="GrpWall" unique_id=1062315322 instance=ExtResource("4_ihfcg")]
+position = Vector2(-24, 226)
+rotation = 3.1415927
+
+[node name="WallBasic14" parent="GrpWall" unique_id=235454532 instance=ExtResource("4_ihfcg")]
+position = Vector2(973, 226)
+
+[node name="WallBasic17" parent="GrpWall" unique_id=1726511318 instance=ExtResource("4_ihfcg")]
+position = Vector2(1174, 226)
+
+[node name="WallBasic18" parent="GrpWall" unique_id=1566008210 instance=ExtResource("4_ihfcg")]
+position = Vector2(1074, 226)
+rotation = 3.1415927
+
+[node name="WallBasic19" parent="GrpWall" unique_id=981949001 instance=ExtResource("4_ihfcg")]
+position = Vector2(872, 226)
+rotation = 3.1415927
+
+[node name="WallBasic2" parent="GrpWall" unique_id=1947972819 instance=ExtResource("4_ihfcg")]
+position = Vector2(826, 71)
+rotation = 1.5707964
+
+[node name="WallBasic12" parent="GrpWall" unique_id=387100100 instance=ExtResource("4_ihfcg")]
+position = Vector2(777, 225)
+rotation = 3.1415927
+
+[node name="WallBasic13" parent="GrpWall" unique_id=1310234222 instance=ExtResource("4_ihfcg")]
+position = Vector2(370, 225)
+rotation = 3.1415927
+
+[node name="WallBasic9" parent="GrpWall" unique_id=1797070797 instance=ExtResource("4_ihfcg")]
+position = Vector2(320, 172)
+rotation = 1.5707964
+
 [node name="WallBasic4" parent="GrpWall" unique_id=2038385024 instance=ExtResource("4_ihfcg")]
-position = Vector2(901, 115)
+position = Vector2(320, 71)
 rotation = 4.712389
 
-[node name="WallLeft1" parent="GrpWall" unique_id=2051107681 instance=ExtResource("4_5hph3")]
-position = Vector2(1083, 104)
-rotation = -1.5707964
-
-[node name="WallLeft2" parent="GrpWall" unique_id=970401818 instance=ExtResource("4_5hph3")]
-position = Vector2(1043, 245)
-
-[node name="WallLeft3" parent="GrpWall" unique_id=451254082 instance=ExtResource("4_5hph3")]
-position = Vector2(941, 64)
+[node name="WallBasic10" parent="GrpWall" unique_id=618390826 instance=ExtResource("4_ihfcg")]
+position = Vector2(826, 172)
+rotation = 4.712389
 
 [node name="WallSquare1" parent="GrpWall" unique_id=1310442410 instance=ExtResource("5_j7kpp")]
-position = Vector2(901, 162)
+position = Vector2(826, 226)
 
-[node name="WallSquare2" parent="GrpWall" unique_id=606538422 instance=ExtResource("5_j7kpp")]
-position = Vector2(901, 245)
+[node name="WallSquare3" parent="GrpWall" unique_id=442004452 instance=ExtResource("5_j7kpp")]
+position = Vector2(732, 226)
+
+[node name="WallSquare4" parent="GrpWall" unique_id=617493727 instance=ExtResource("5_j7kpp")]
+position = Vector2(418, 226)
+
+[node name="WallSquare5" parent="GrpWall" unique_id=1836042348 instance=ExtResource("5_j7kpp")]
+position = Vector2(320, 226)
+
+[node name="Invisible_Wall" parent="GrpWall" unique_id=360388285 instance=ExtResource("4_ihfcg")]
+position = Vector2(1174, 441)
+rotation = -1.5707964
+scale = Vector2(3.7599988, 1)
+
+[node name="Invisible_Wall2" parent="GrpWall" unique_id=579604825 instance=ExtResource("4_ihfcg")]
+position = Vector2(-24, 441)
+rotation = 1.5707964
+scale = Vector2(3.7599988, 1)
+
+[node name="Invisible_Wall3" parent="GrpWall" unique_id=85335178 instance=ExtResource("4_ihfcg")]
+position = Vector2(574, 668)
+scale = Vector2(10.080002, 1)
 
 [node name="GrpPNJ" type="Node" parent="." unique_id=1839669559]
 
-[node name="Animals1" parent="GrpPNJ" unique_id=409801974 instance=ExtResource("2_hbghi")]
-position = Vector2(384, 200)
+[node name="Animals1" parent="GrpPNJ" unique_id=544405098 instance=ExtResource("2_hbghi")]
+position = Vector2(574, 306)
 
 [node name="Animals2" parent="GrpPNJ" unique_id=397309686 instance=ExtResource("2_hbghi")]
-position = Vector2(496, 400)
-animal_type = "Fromage"
+position = Vector2(480, 280)
 
 [node name="Animals3" parent="GrpPNJ" unique_id=2146688313 instance=ExtResource("2_hbghi")]
-position = Vector2(280, 432)
-animal_type = "Fromage"
+position = Vector2(656, 281)
 
-[node name="Sprite2D" parent="GrpPNJ/Animals3" index="0" unique_id=1329254734]
-frame = 1
+[node name="Animals" parent="GrpPNJ" unique_id=409801974 instance=ExtResource("2_hbghi")]
+position = Vector2(564.99994, 618.99994)
+rotation = 0.20469761
 
 [node name="GrpBckground" type="Node" parent="." unique_id=363279919]
 
@@ -107,57 +182,4 @@ position = Vector2(968.50006, 529.50006)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("8_5rr72")
 
-[node name="GrpMask" type="Node" parent="." unique_id=246134304]
-
-[node name="Mask1" parent="GrpMask" unique_id=239077444 instance=ExtResource("9_5rr72")]
-position = Vector2(666, 236)
-
-[node name="Mask2" parent="GrpMask" unique_id=1346918696 instance=ExtResource("9_5rr72")]
-position = Vector2(139, 401)
-mask_type = "Souris"
-
-[node name="Sprite2D" parent="GrpMask/Mask2" index="0" unique_id=1579870222]
-frame = 1
-
-[node name="GrpPaddock" type="Node" parent="." unique_id=255059525]
-script = ExtResource("9_gyffv")
-next_level_path = "res://level_2.tscn"
-
-[node name="Paddock" parent="GrpPaddock" unique_id=1888835191 instance=ExtResource("3_hn12h")]
-position = Vector2(896, 64)
-animal_count = 1
-
-[node name="Label" parent="GrpPaddock/Paddock" index="0" unique_id=1547415217]
-offset_left = 42.0
-offset_top = -49.0
-offset_right = 138.0
-offset_bottom = -12.0
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GrpPaddock/Paddock" unique_id=131125346]
-polygon = PackedVector2Array(0, 0, 192, 0, 192, 192, 0, 192)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1297321393]
-visible = false
-
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=151970605]
-offset_right = 1152.0
-offset_bottom = 648.0
-theme_override_font_sizes/normal_font_size = 128
-bbcode_enabled = true
-text = "[wave]VICTORY!!![/wave]"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=1705398788]
-offset_top = 129.0
-offset_right = 1152.0
-offset_bottom = 648.0
-text = "space to next level"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[editable path="GrpPNJ/Animals1"]
-[editable path="GrpPNJ/Animals2"]
-[editable path="GrpPNJ/Animals3"]
-[editable path="GrpMask/Mask2"]
-[editable path="GrpPaddock/Paddock"]
+[editable path="Paddock"]

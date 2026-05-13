@@ -9,7 +9,7 @@ const SPEED = 300.0
 var h_dir
 var v_dir
 var throw_spd_min = 250.0
-var throw_spd_max = 2500.0
+var throw_spd_max = 1000.0
 var throw_spd = 0
 @export var player_id = 0
 @export_enum ("Chat", "Souris") var animal_type = ""
