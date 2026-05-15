@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cbdv820rg3who" path="res://animals.tscn" id="5_s77qv"]
 [ext_resource type="Texture2D" uid="uid://ddcyg7o4tcomo" path="res://Assets/Herbe_1@300x-8.png" id="6_5hnhx"]
 [ext_resource type="Texture2D" uid="uid://ciqljjshkxsoq" path="res://Assets/Herbe_2@300x-8.png" id="7_78pok"]
+[ext_resource type="PackedScene" path="res://canvas_layer.tscn" id="9_ehv2h"]
 [ext_resource type="Script" uid="uid://c3gd2afgti2yh" path="res://victory.gd" id="9_jcnlr"]
 
 [node name="Level1" type="Node2D" unique_id=1801627583]
@@ -121,16 +122,21 @@ position = Vector2(418, 226)
 position = Vector2(320, 226)
 
 [node name="Invisible_Wall" parent="GrpWall" unique_id=360388285 instance=ExtResource("4_ehv2h")]
-position = Vector2(1174, 441)
+position = Vector2(1174, 341)
 rotation = -1.5707964
-scale = Vector2(3.7599988, 1)
+scale = Vector2(6.600001, 1)
 
 [node name="Invisible_Wall2" parent="GrpWall" unique_id=579604825 instance=ExtResource("4_ehv2h")]
-position = Vector2(-24, 441)
+position = Vector2(-24, 327)
 rotation = 1.5707964
-scale = Vector2(3.7599988, 1)
+scale = Vector2(6.5599985, 1)
 
 [node name="Invisible_Wall3" parent="GrpWall" unique_id=85335178 instance=ExtResource("4_ehv2h")]
+position = Vector2(582, -17)
+rotation = 3.1415927
+scale = Vector2(10.080002, 1)
+
+[node name="Invisible_Wall4" parent="GrpWall" unique_id=1418254105 instance=ExtResource("4_ehv2h")]
 position = Vector2(574, 668)
 scale = Vector2(10.080002, 1)
 
@@ -186,5 +192,9 @@ z_index = -1
 position = Vector2(968.50006, 529.50006)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("7_78pok")
+
+[node name="VictoryScreen" parent="." unique_id=186024796 instance=ExtResource("9_ehv2h")]
+unique_name_in_owner = true
+visible = false
 
 [editable path="GrpEnclos/Paddock"]
