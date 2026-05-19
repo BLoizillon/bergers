@@ -8,9 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://ddcyg7o4tcomo" path="res://Assets/Herbe_1@300x-8.png" id="6_5hnhx"]
 [ext_resource type="Texture2D" uid="uid://ciqljjshkxsoq" path="res://Assets/Herbe_2@300x-8.png" id="7_78pok"]
 [ext_resource type="Script" uid="uid://c3gd2afgti2yh" path="res://victory.gd" id="9_jcnlr"]
+[ext_resource type="PackedScene" uid="uid://b1omdphlq8qax" path="res://victory_screen.tscn" id="9_vltsr"]
 
 [node name="Level1" type="Node2D" unique_id=1801627583]
-position = Vector2(0, 5)
+metadata/_edit_lock_ = true
 
 [node name="Player1" parent="." unique_id=981124934 instance=ExtResource("1_15wb7")]
 position = Vector2(105, 108)
@@ -23,20 +24,35 @@ animal_type = "Chat"
 
 [node name="GrpEnclos" type="Node" parent="." unique_id=655392166]
 script = ExtResource("9_jcnlr")
-next_level_path = "res://level_2.tscn"
+next_level_path = "res://Levels/level_3.tscn"
 
 [node name="Paddock" parent="GrpEnclos" unique_id=1888835191 instance=ExtResource("3_7dov7")]
 position = Vector2(426, 17)
-animal_count = 4
+animal_count = 3
 
 [node name="Label" parent="GrpEnclos/Paddock" index="0" unique_id=1547415217]
-offset_left = 336.0
-offset_top = 24.0
-offset_right = 432.0
-offset_bottom = 61.0
+offset_left = -15.0
+offset_top = -16.0
+offset_right = 81.0
+offset_bottom = 21.0
+rotation = 1.5707964
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GrpEnclos/Paddock" unique_id=131125346]
-polygon = PackedVector2Array(0, 0, 306, -1, 305, 623, 5, 622)
+polygon = PackedVector2Array(0, 0, 148, 0, 149, 624, 5, 622)
+
+[node name="Paddock" parent="GrpEnclos/Paddock" unique_id=258759384 instance=ExtResource("3_7dov7")]
+position = Vector2(159, -3)
+animal_count = 3
+
+[node name="Label" parent="GrpEnclos/Paddock/Paddock" index="0" unique_id=1547415217]
+offset_left = 198.0
+offset_top = -11.0
+offset_right = 294.0
+offset_bottom = 26.0
+rotation = 1.5707964
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GrpEnclos/Paddock/Paddock" unique_id=422444254]
+polygon = PackedVector2Array(0, 0, 148, 0, 149, 624, 5, 622)
 
 [node name="GrpWall" type="Node" parent="." unique_id=472281946]
 
@@ -174,47 +190,54 @@ position = Vector2(890, 422)
 position = Vector2(262.00012, 233.99994)
 rotation = 0.20469761
 
-[node name="GrpBckground" type="Node" parent="." unique_id=363279919]
+[node name="GrpBckground" type="Node2D" parent="." unique_id=309796617]
+metadata/_edit_lock_ = true
 
 [node name="Herbe1_300x8" type="Sprite2D" parent="GrpBckground" unique_id=644038217]
 z_index = -1
 position = Vector2(188.5, 138.50002)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("6_5hnhx")
+metadata/_edit_lock_ = true
 
 [node name="Herbe2_300x8" type="Sprite2D" parent="GrpBckground" unique_id=943249552]
 z_index = -1
 position = Vector2(579, 136)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("7_78pok")
+metadata/_edit_lock_ = true
 
 [node name="Herbe1_300x9" type="Sprite2D" parent="GrpBckground" unique_id=1447941898]
 z_index = -1
 position = Vector2(188.5, 519.5)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("6_5hnhx")
+metadata/_edit_lock_ = true
 
 [node name="Herbe2_300x9" type="Sprite2D" parent="GrpBckground" unique_id=1468612175]
 z_index = -1
 position = Vector2(578.5, 519.5)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("7_78pok")
+metadata/_edit_lock_ = true
 
 [node name="Herbe1_300x10" type="Sprite2D" parent="GrpBckground" unique_id=1330737313]
 z_index = -1
 position = Vector2(965.99994, 140.00003)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("6_5hnhx")
+metadata/_edit_lock_ = true
 
 [node name="Herbe2_300x10" type="Sprite2D" parent="GrpBckground" unique_id=1898562127]
 z_index = -1
 position = Vector2(968.50006, 529.50006)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("7_78pok")
+metadata/_edit_lock_ = true
 
-[node name="VictoryScreen" parent="." unique_id=186024796]
+[node name="VictoryScreen" parent="." unique_id=186024796 instance=ExtResource("9_vltsr")]
 unique_name_in_owner = true
-visible = true
-script = ExtResource("9_jcnlr")
+visible = false
 
 [editable path="GrpEnclos/Paddock"]
+[editable path="GrpEnclos/Paddock/Paddock"]

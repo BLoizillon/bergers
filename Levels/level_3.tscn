@@ -8,18 +8,17 @@
 [ext_resource type="PackedScene" uid="uid://cbdv820rg3who" path="res://animals.tscn" id="6_7cdb2"]
 [ext_resource type="Texture2D" uid="uid://ddcyg7o4tcomo" path="res://Assets/Herbe_1@300x-8.png" id="7_2urlj"]
 [ext_resource type="Texture2D" uid="uid://ciqljjshkxsoq" path="res://Assets/Herbe_2@300x-8.png" id="8_88iqf"]
+[ext_resource type="PackedScene" uid="uid://ceyis8w3cd1eq" path="res://mask.tscn" id="9_ck3gp"]
 
 [node name="Level1" type="Node2D" unique_id=1801627583]
 position = Vector2(0, 5)
 
 [node name="Player1" parent="." unique_id=981124934 instance=ExtResource("1_fa81k")]
 position = Vector2(64, 587)
-animal_type = "Chat"
 
 [node name="Player2" parent="." unique_id=1094857113 instance=ExtResource("1_fa81k")]
 position = Vector2(1104, 61)
 player_id = 1
-animal_type = "Chat"
 
 [node name="GrpEnclos" type="Node" parent="." unique_id=655392166]
 script = ExtResource("2_ck3gp")
@@ -27,6 +26,7 @@ next_level_path = "res://level_2.tscn"
 
 [node name="Paddock" parent="GrpEnclos" unique_id=1888835191 instance=ExtResource("3_trpa2")]
 position = Vector2(426, 17)
+animal_type = "Fromage"
 animal_count = 4
 
 [node name="Label" parent="GrpEnclos/Paddock" index="0" unique_id=1547415217]
@@ -38,17 +38,17 @@ offset_bottom = 261.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GrpEnclos/Paddock" unique_id=131125346]
 polygon = PackedVector2Array(-415, -5, -112, -4, -112, 198, -417, 199)
 
-[node name="Paddock" parent="GrpEnclos/Paddock" unique_id=1667583964 instance=ExtResource("3_trpa2")]
-position = Vector2(426, 17)
+[node name="Paddock2" parent="GrpEnclos" unique_id=1667583964 instance=ExtResource("3_trpa2")]
+position = Vector2(852, 34)
 animal_count = 4
 
-[node name="Label" parent="GrpEnclos/Paddock/Paddock" index="0" unique_id=1547415217]
+[node name="Label" parent="GrpEnclos/Paddock2" index="0" unique_id=1547415217]
 offset_left = -26.0
 offset_top = 333.0
 offset_right = 70.0
 offset_bottom = 370.0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GrpEnclos/Paddock/Paddock" unique_id=1291578826]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GrpEnclos/Paddock2" unique_id=1291578826]
 polygon = PackedVector2Array(-16, 397, 290, 397, 293, 607, -16, 604)
 
 [node name="GrpWall" type="Node" parent="." unique_id=472281946]
@@ -178,10 +178,38 @@ scale = Vector2(10.080002, 1)
 [node name="Animals1" parent="GrpPNJ" unique_id=544405098 instance=ExtResource("6_7cdb2")]
 position = Vector2(65, 411)
 
+[node name="Animals3" parent="GrpPNJ" unique_id=409801974 instance=ExtResource("6_7cdb2")]
+position = Vector2(906, 528)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals3" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals7" parent="GrpPNJ" unique_id=796737951 instance=ExtResource("6_7cdb2")]
+position = Vector2(247, 523)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals7" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals8" parent="GrpPNJ" unique_id=1894106512 instance=ExtResource("6_7cdb2")]
+position = Vector2(689, 127)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals8" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals6" parent="GrpPNJ" unique_id=1580218831 instance=ExtResource("6_7cdb2")]
+position = Vector2(1077, 571)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals6" index="0" unique_id=1329254734]
+frame = 1
+
 [node name="Animals2" parent="GrpPNJ" unique_id=397309686 instance=ExtResource("6_7cdb2")]
 position = Vector2(591, 546)
 
-[node name="Animals4" parent="GrpPNJ" unique_id=409801974 instance=ExtResource("6_7cdb2")]
+[node name="Animals4" parent="GrpPNJ" unique_id=1915391617 instance=ExtResource("6_7cdb2")]
 position = Vector2(233, 94)
 
 [node name="Animals5" parent="GrpPNJ" unique_id=1698680091 instance=ExtResource("6_7cdb2")]
@@ -225,5 +253,16 @@ position = Vector2(968.50006, 529.50006)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("8_88iqf")
 
+[node name="Mask" parent="." unique_id=239077444 instance=ExtResource("9_ck3gp")]
+position = Vector2(429, 286)
+
+[node name="Mask2" parent="." unique_id=882085928 instance=ExtResource("9_ck3gp")]
+position = Vector2(688, 396)
+mask_type = "Souris"
+
 [editable path="GrpEnclos/Paddock"]
-[editable path="GrpEnclos/Paddock/Paddock"]
+[editable path="GrpEnclos/Paddock2"]
+[editable path="GrpPNJ/Animals3"]
+[editable path="GrpPNJ/Animals7"]
+[editable path="GrpPNJ/Animals8"]
+[editable path="GrpPNJ/Animals6"]

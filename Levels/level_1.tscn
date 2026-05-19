@@ -4,11 +4,11 @@
 [ext_resource type="Script" uid="uid://c3gd2afgti2yh" path="res://victory.gd" id="2_bjebc"]
 [ext_resource type="PackedScene" uid="uid://cbdv820rg3who" path="res://animals.tscn" id="2_hbghi"]
 [ext_resource type="PackedScene" uid="uid://nek4swqwefhw" path="res://paddock.tscn" id="3_hn12h"]
-[ext_resource type="PackedScene" uid="uid://6i0c52ervcle" path="res://Walls/wall_basic.tscn" id="4_ihfcg"]
-[ext_resource type="PackedScene" uid="uid://bmlqc2nu0cevj" path="res://Walls/wall_square.tscn" id="5_j7kpp"]
+[ext_resource type="PackedScene" path="res://Walls/wall_basic.tscn" id="4_ihfcg"]
+[ext_resource type="PackedScene" path="res://Walls/wall_square.tscn" id="5_j7kpp"]
 [ext_resource type="Texture2D" uid="uid://ddcyg7o4tcomo" path="res://Assets/Herbe_1@300x-8.png" id="7_bjebc"]
 [ext_resource type="Texture2D" uid="uid://ciqljjshkxsoq" path="res://Assets/Herbe_2@300x-8.png" id="8_5rr72"]
-[ext_resource type="PackedScene" path="res://canvas_layer.tscn" id="9_5rr72"]
+[ext_resource type="PackedScene" uid="uid://b1omdphlq8qax" path="res://victory_screen.tscn" id="9_xoyoh"]
 
 [node name="Level2" type="Node2D" unique_id=1801627583]
 
@@ -23,7 +23,7 @@ animal_type = "Chat"
 
 [node name="GrpEnclos" type="Node" parent="." unique_id=655392166]
 script = ExtResource("2_bjebc")
-next_level_path = "res://level_2.tscn"
+next_level_path = "res://Levels/level_2.tscn"
 
 [node name="Paddock" parent="GrpEnclos" unique_id=1888835191 instance=ExtResource("3_hn12h")]
 position = Vector2(320, 32)
@@ -188,7 +188,7 @@ position = Vector2(968.50006, 529.50006)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("8_5rr72")
 
-[node name="VictoryScreen" parent="." unique_id=186024796 instance=ExtResource("9_5rr72")]
+[node name="VictoryScreen" parent="." unique_id=186024796 instance=ExtResource("9_xoyoh")]
 unique_name_in_owner = true
 visible = false
 
