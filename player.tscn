@@ -4,7 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://cjui6oh8brq1n" path="res://Assets/Spritesheet_Perso@300x-8.png" id="2_onrkg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onrkg"]
-height = 48.0
+radius = 32.0
+height = 64.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i3pqv"]
 radius = 80.0
@@ -32,6 +33,7 @@ hframes = 6
 vframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=743118335]
+position = Vector2(0, -16)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_onrkg")
 
