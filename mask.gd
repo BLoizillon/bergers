@@ -4,6 +4,10 @@ extends Area2D
 @onready var sprite: Sprite2D = $Sprite2D
 
 
+func _ready():
+	_mask_sprite()
+
+
 func _mask_sprite():
 	match mask_type:
 		"Chat": sprite.frame = 0

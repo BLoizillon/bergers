@@ -2,6 +2,19 @@
 
 [ext_resource type="Script" uid="uid://bjdnhp6hytexe" path="res://player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://cjui6oh8brq1n" path="res://Assets/Spritesheet_Perso@300x-8.png" id="2_onrkg"]
+[ext_resource type="AudioStream" uid="uid://jo8u0jvll31i" path="res://Sounds/masque_1.wav" id="3_hqtel"]
+[ext_resource type="AudioStream" uid="uid://5ukklffkqyqa" path="res://Sounds/masque_2.wav" id="4_sweqy"]
+[ext_resource type="AudioStream" uid="uid://bqwogf3ctqrdq" path="res://Sounds/miaoup1_1.wav" id="5_606se"]
+[ext_resource type="AudioStream" uid="uid://dxa0jx2updjty" path="res://Sounds/miaoup1_2.wav" id="6_u1c27"]
+[ext_resource type="AudioStream" uid="uid://cfi8efou3vw0j" path="res://Sounds/miaoup1_3.wav" id="7_op7ga"]
+[ext_resource type="AudioStream" uid="uid://b6jamt0ewpvau" path="res://Sounds/miaoup2_1.wav" id="8_q13i1"]
+[ext_resource type="AudioStream" uid="uid://dewuyfigo1h0x" path="res://Sounds/miaoup2_2.wav" id="9_pylmc"]
+[ext_resource type="AudioStream" uid="uid://b2qqm2n3rssns" path="res://Sounds/miaoup2_3.wav" id="10_pbfsw"]
+[ext_resource type="AudioStream" uid="uid://ckx75fguyjbog" path="res://Sounds/squickp1_1.wav" id="11_5tmop"]
+[ext_resource type="AudioStream" uid="uid://bdvnhtmp0ijbx" path="res://Sounds/squickp1_2.wav" id="12_7ahtn"]
+[ext_resource type="AudioStream" uid="uid://iv024mrxcuk6" path="res://Sounds/squickp2_1.wav" id="13_7lmhl"]
+[ext_resource type="AudioStream" uid="uid://boft3jtvm34ea" path="res://Sounds/squickp2_2.wav" id="14_dx0e4"]
+[ext_resource type="AudioStream" uid="uid://c63yeqtfpth00" path="res://Sounds/squickp2_3.wav" id="15_jm5j8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onrkg"]
 radius = 32.0
@@ -13,6 +26,39 @@ radius = 80.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3pqv"]
 radius = 16.0
 height = 64.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_2hs0m"]
+random_pitch = 1.1892071
+streams_count = 2
+stream_0/stream = ExtResource("3_hqtel")
+stream_1/stream = ExtResource("4_sweqy")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_7hik5"]
+random_pitch = 1.1892071
+streams_count = 3
+stream_0/stream = ExtResource("5_606se")
+stream_1/stream = ExtResource("6_u1c27")
+stream_2/stream = ExtResource("7_op7ga")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qtqh7"]
+random_pitch = 1.1892071
+streams_count = 3
+stream_0/stream = ExtResource("8_q13i1")
+stream_1/stream = ExtResource("9_pylmc")
+stream_2/stream = ExtResource("10_pbfsw")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_2wuci"]
+random_pitch = 1.1892071
+streams_count = 2
+stream_0/stream = ExtResource("11_5tmop")
+stream_1/stream = ExtResource("12_7ahtn")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_iruf7"]
+random_pitch = 1.1892071
+streams_count = 3
+stream_0/stream = ExtResource("13_7lmhl")
+stream_1/stream = ExtResource("14_dx0e4")
+stream_2/stream = ExtResource("15_jm5j8")
 
 [node name="Player" type="CharacterBody2D" unique_id=981124934]
 z_index = 1
@@ -58,6 +104,25 @@ collision_mask = 16
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaMask" unique_id=392627037]
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_i3pqv")
+
+[node name="SFXMasque" type="AudioStreamPlayer" parent="." unique_id=295174596]
+stream = SubResource("AudioStreamRandomizer_2hs0m")
+volume_db = -6.0
+
+[node name="SFXMiaouP1" type="AudioStreamPlayer" parent="." unique_id=1186908672]
+stream = SubResource("AudioStreamRandomizer_7hik5")
+volume_db = -6.0
+
+[node name="SFXMiaouP2" type="AudioStreamPlayer" parent="." unique_id=544142546]
+stream = SubResource("AudioStreamRandomizer_qtqh7")
+volume_db = -6.0
+
+[node name="SFXSquickP1" type="AudioStreamPlayer" parent="." unique_id=1888948345]
+stream = SubResource("AudioStreamRandomizer_2wuci")
+volume_db = -6.0
+
+[node name="SFXSquickP2" type="AudioStreamPlayer" parent="." unique_id=688674964]
+stream = SubResource("AudioStreamRandomizer_iruf7")
 
 [connection signal="body_exited" from="Area2D" to="." method="_on_body_exited"]
 [connection signal="area_entered" from="AreaMask" to="." method="_on_mask_area_entered"]

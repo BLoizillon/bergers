@@ -5,6 +5,11 @@ const SPEED = 300.0
 @onready var area_mask: Area2D = $AreaMask
 @onready var progress_bar = $ProgressBar
 @onready var sprite: Sprite2D = $Sprite2D
+@onready var sfx_masque: AudioStreamPlayer = $SFXMasque
+@onready var sfx_miaou_p_1: AudioStreamPlayer = $SFXMiaouP1
+@onready var sfx_miaou_p_2: AudioStreamPlayer = $SFXMiaouP2
+@onready var sfx_squick_p_1: AudioStreamPlayer = $SFXSquickP1
+@onready var sfx_squick_p_2: AudioStreamPlayer = $SFXSquickP2
 
 var h_dir
 var v_dir
@@ -64,6 +69,14 @@ func _action():
 	if Input.is_action_just_pressed("players_action"):
 		throw_spd = throw_spd_min
 	if Input.is_action_just_released("players_action"):
+		if player_id == 0:
+			match animal_type:
+				"Chat": sfx_miaou_p_1.play()
+				"Souris": sfx_squick_p_1.play()
+		else:
+			match animal_type:
+				"Chat": sfx_miaou_p_2.play()
+				"Souris": sfx_squick_p_2.play()
 		var bodies = area_animal.get_overlapping_bodies()
 		if bodies:
 			for body in bodies:
@@ -72,6 +85,7 @@ func _action():
 						body.can_move = true
 						body.player = self
 						body.speed = throw_spd
+						body._play_sound()
 		throw_spd = 0
 		progress_bar.hide()
 		progress_bar.value = 0
@@ -100,6 +114,7 @@ func _on_mask_area_entered(area):
 	var last_animal_type = animal_type
 	animal_type = area.mask_type
 	_ready()
+	sfx_masque.play()
 	if last_animal_type == "":
 		area.queue_free()
 	else:

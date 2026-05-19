@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://nek4swqwefhw"]
 
 [ext_resource type="Script" uid="uid://dl5jsykhg6cwu" path="res://paddock.gd" id="1_tirl4"]
+[ext_resource type="AudioStream" uid="uid://xamnvyn2nase" path="res://Sounds/compteur_1.wav" id="2_ljkrw"]
 
 [node name="Paddock" type="Area2D" unique_id=1888835191]
 collision_layer = 8
@@ -17,6 +18,9 @@ theme_override_font_sizes/normal_font_size = 27
 bbcode_enabled = true
 text = "Default"
 horizontal_alignment = 1
+
+[node name="SFXCounter" type="AudioStreamPlayer" parent="." unique_id=1791966363]
+stream = ExtResource("2_ljkrw")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

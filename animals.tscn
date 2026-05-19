@@ -2,9 +2,29 @@
 
 [ext_resource type="Script" uid="uid://bh07rc56seqee" path="res://animals.gd" id="1_pcvj2"]
 [ext_resource type="Texture2D" uid="uid://db4e4t8o07iw0" path="res://Assets/Spritesheet_Animaux300x-8.png" id="2_gbwfx"]
+[ext_resource type="AudioStream" uid="uid://54lo0ftxh0n5" path="res://Sounds/fromage_1.wav" id="3_1u0sg"]
+[ext_resource type="AudioStream" uid="uid://vi8ldchjr28p" path="res://Sounds/souris_1.wav" id="3_066lt"]
+[ext_resource type="AudioStream" uid="uid://cai6umjf3adwb" path="res://Sounds/souris_2.wav" id="4_xr8s6"]
+[ext_resource type="AudioStream" uid="uid://colnjbb76cr1h" path="res://Sounds/fromage_2.wav" id="4_xyqjv"]
+[ext_resource type="AudioStream" uid="uid://cjtnwiihwc8cc" path="res://Sounds/souris_3.wav" id="5_702ke"]
+[ext_resource type="AudioStream" uid="uid://dmoptvcb8fds7" path="res://Sounds/fromage_3.wav" id="5_dprhg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pcvj2"]
 radius = 20.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_6sglo"]
+random_pitch = 1.1892071
+streams_count = 3
+stream_0/stream = ExtResource("3_1u0sg")
+stream_1/stream = ExtResource("4_xyqjv")
+stream_2/stream = ExtResource("5_dprhg")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_1u0sg"]
+random_pitch = 1.1892071
+streams_count = 3
+stream_0/stream = ExtResource("3_066lt")
+stream_1/stream = ExtResource("4_xr8s6")
+stream_2/stream = ExtResource("5_702ke")
 
 [node name="Animals" type="CharacterBody2D" unique_id=409801974 groups=["animals"]]
 collision_layer = 2
@@ -24,3 +44,11 @@ shape = SubResource("CircleShape2D_pcvj2")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=1745451244]
 shape = SubResource("CircleShape2D_pcvj2")
+
+[node name="SFXFromage" type="AudioStreamPlayer" parent="." unique_id=1903176100]
+stream = SubResource("AudioStreamRandomizer_6sglo")
+volume_db = -12.0
+
+[node name="SFXSouris" type="AudioStreamPlayer" parent="." unique_id=62615923]
+stream = SubResource("AudioStreamRandomizer_1u0sg")
+volume_db = -3.0

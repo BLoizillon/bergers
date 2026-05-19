@@ -6,6 +6,7 @@ extends Area2D
 var current_count = 0
 var is_full := false
 @onready var label = $Label
+@onready var sfx_counter: AudioStreamPlayer = $SFXCounter
 
 
 func _ready():
@@ -14,6 +15,7 @@ func _ready():
 
 func _on_body_entered(body):
 	if body.animal_type == animal_type:
+		sfx_counter.play()
 		current_count += 1
 		label.text = "[wave]" + str(current_count) + "/" + str(animal_count) + "[/wave]"
 		if current_count == animal_count:
