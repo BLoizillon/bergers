@@ -157,12 +157,14 @@ z_index = -1
 position = Vector2(188.5, 138.50002)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("7_bjebc")
+metadata/_edit_lock_ = true
 
 [node name="Herbe2_300x8" type="Sprite2D" parent="GrpBckground" unique_id=943249552]
 z_index = -1
 position = Vector2(578.5, 138.5)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("8_5rr72")
+metadata/_edit_lock_ = true
 
 [node name="Herbe1_300x9" type="Sprite2D" parent="GrpBckground" unique_id=1447941898]
 z_index = -1

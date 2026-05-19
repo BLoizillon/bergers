@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ddcyg7o4tcomo" path="res://Assets/Herbe_1@300x-8.png" id="7_fcg6d"]
 [ext_resource type="Texture2D" uid="uid://ciqljjshkxsoq" path="res://Assets/Herbe_2@300x-8.png" id="8_3227t"]
 [ext_resource type="PackedScene" uid="uid://ceyis8w3cd1eq" path="res://mask.tscn" id="9_lk1ng"]
+[ext_resource type="PackedScene" uid="uid://b1omdphlq8qax" path="res://victory_screen.tscn" id="10_77xid"]
 
 [node name="Level1" type="Node2D" unique_id=1801627583]
 position = Vector2(0, 5)
@@ -24,7 +25,7 @@ animal_type = "Souris"
 
 [node name="GrpEnclos" type="Node" parent="." unique_id=655392166]
 script = ExtResource("2_77xid")
-next_level_path = "res://level_2.tscn"
+next_level_path = "res://Levels/level_5.tscn"
 
 [node name="Paddock" parent="GrpEnclos" unique_id=1888835191 instance=ExtResource("3_m0m22")]
 position = Vector2(426, 17)
@@ -481,6 +482,10 @@ mask_type = "Souris"
 
 [node name="Mask2" parent="." unique_id=882085928 instance=ExtResource("9_lk1ng")]
 position = Vector2(784, 449)
+
+[node name="VictoryScreen" parent="." unique_id=186024796 instance=ExtResource("10_77xid")]
+unique_name_in_owner = true
+visible = false
 
 [editable path="GrpEnclos/Paddock"]
 [editable path="GrpEnclos/Paddock3"]

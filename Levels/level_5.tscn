@@ -1,0 +1,427 @@
+[gd_scene format=3 uid="uid://byl2roawls5m8"]
+
+[ext_resource type="PackedScene" uid="uid://br42s7j4mbp0b" path="res://player.tscn" id="1_xagau"]
+[ext_resource type="Script" uid="uid://c3gd2afgti2yh" path="res://victory.gd" id="2_ytgun"]
+[ext_resource type="PackedScene" uid="uid://nek4swqwefhw" path="res://paddock.tscn" id="3_rpnhq"]
+[ext_resource type="PackedScene" path="res://Walls/wall_basic.tscn" id="4_hu0ol"]
+[ext_resource type="PackedScene" path="res://Walls/wall_square.tscn" id="5_m47b0"]
+[ext_resource type="PackedScene" uid="uid://cbdv820rg3who" path="res://animals.tscn" id="6_x7gsr"]
+[ext_resource type="Texture2D" uid="uid://ddcyg7o4tcomo" path="res://Assets/Herbe_1@300x-8.png" id="7_uk1uv"]
+[ext_resource type="Texture2D" uid="uid://ciqljjshkxsoq" path="res://Assets/Herbe_2@300x-8.png" id="8_25373"]
+[ext_resource type="PackedScene" uid="uid://ceyis8w3cd1eq" path="res://mask.tscn" id="9_vybpl"]
+
+[node name="Level1" type="Node2D" unique_id=1801627583]
+position = Vector2(0, 5)
+
+[node name="Player1" parent="." unique_id=981124934 instance=ExtResource("1_xagau")]
+position = Vector2(349, 110)
+
+[node name="Player2" parent="." unique_id=1094857113 instance=ExtResource("1_xagau")]
+position = Vector2(776, 584)
+player_id = 1
+
+[node name="GrpEnclos" type="Node" parent="." unique_id=655392166]
+script = ExtResource("2_ytgun")
+next_level_path = "res://level_2.tscn"
+
+[node name="Paddock" parent="GrpEnclos" unique_id=1888835191 instance=ExtResource("3_rpnhq")]
+position = Vector2(426, 17)
+animal_type = "Fromage"
+animal_count = 4
+
+[node name="Label" parent="GrpEnclos/Paddock" index="0" unique_id=1547415217]
+offset_left = -399.0
+offset_top = 15.0
+offset_right = -303.0
+offset_bottom = 52.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GrpEnclos/Paddock" unique_id=131125346]
+polygon = PackedVector2Array(-450, 241, -362, 249, -158, 53, -163, -41, -447, -37)
+
+[node name="Paddock3" parent="GrpEnclos" unique_id=578965294 instance=ExtResource("3_rpnhq")]
+position = Vector2(1283, 17)
+animal_count = 4
+
+[node name="Label" parent="GrpEnclos/Paddock3" index="0" unique_id=1547415217]
+offset_left = -259.0
+offset_top = 10.0
+offset_right = -163.0
+offset_bottom = 47.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GrpEnclos/Paddock3" unique_id=1332951342]
+polygon = PackedVector2Array(-392, -31, -391, 52, -194, 250, -112, 250, -114, -43)
+
+[node name="Paddock2" parent="GrpEnclos" unique_id=1667583964 instance=ExtResource("3_rpnhq")]
+position = Vector2(852, 34)
+animal_count = 4
+
+[node name="Label" parent="GrpEnclos/Paddock2" index="0" unique_id=1547415217]
+offset_left = -827.0
+offset_top = 550.0
+offset_right = -731.0
+offset_bottom = 587.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GrpEnclos/Paddock2" unique_id=1291578826]
+position = Vector2(-546, -421)
+polygon = PackedVector2Array(-338, 767, -238, 771, -40, 966, -45, 1054, -338, 1049)
+
+[node name="Paddock4" parent="GrpEnclos" unique_id=410841835 instance=ExtResource("3_rpnhq")]
+position = Vector2(1151, 34)
+animal_type = "Fromage"
+animal_count = 4
+
+[node name="Label" parent="GrpEnclos/Paddock4" index="0" unique_id=1547415217]
+offset_left = -126.0
+offset_top = 550.0
+offset_right = -30.0
+offset_bottom = 587.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GrpEnclos/Paddock4" unique_id=461861576]
+position = Vector2(-546, -421)
+polygon = PackedVector2Array(482, 774, 566, 779, 569, 1053, 291, 1054, 283, 967)
+
+[node name="GrpWall" type="Node" parent="." unique_id=472281946]
+
+[node name="Invisible_Wall" parent="GrpWall" unique_id=360388285 instance=ExtResource("4_hu0ol")]
+position = Vector2(1174, 341)
+rotation = -1.5707964
+scale = Vector2(6.600001, 1)
+
+[node name="Invisible_Wall2" parent="GrpWall" unique_id=579604825 instance=ExtResource("4_hu0ol")]
+position = Vector2(-24, 327)
+rotation = 1.5707964
+scale = Vector2(6.5599985, 1)
+
+[node name="Invisible_Wall3" parent="GrpWall" unique_id=85335178 instance=ExtResource("4_hu0ol")]
+position = Vector2(582, -17)
+rotation = 3.1415927
+scale = Vector2(10.080002, 1)
+
+[node name="Invisible_Wall4" parent="GrpWall" unique_id=1418254105 instance=ExtResource("4_hu0ol")]
+position = Vector2(574, 668)
+scale = Vector2(10.080002, 1)
+
+[node name="WallBasic36" parent="GrpWall" unique_id=1520096634 instance=ExtResource("4_hu0ol")]
+position = Vector2(7, 538)
+rotation = 1.5707964
+
+[node name="WallBasic37" parent="GrpWall" unique_id=219744733 instance=ExtResource("4_hu0ol")]
+position = Vector2(7, 438)
+rotation = -1.5707964
+
+[node name="WallBasic28" parent="GrpWall" unique_id=934991397 instance=ExtResource("4_hu0ol")]
+position = Vector2(7, 638)
+rotation = 4.712389
+
+[node name="WallBasic38" parent="GrpWall" unique_id=1374338686 instance=ExtResource("4_hu0ol")]
+position = Vector2(7, 111)
+rotation = 1.5707964
+
+[node name="WallBasic39" parent="GrpWall" unique_id=1529378534 instance=ExtResource("4_hu0ol")]
+position = Vector2(7, 11)
+rotation = -1.5707964
+
+[node name="WallBasic29" parent="GrpWall" unique_id=1891639025 instance=ExtResource("4_hu0ol")]
+position = Vector2(7, 211)
+rotation = 4.712389
+
+[node name="WallBasic40" parent="GrpWall" unique_id=1662641033 instance=ExtResource("4_hu0ol")]
+position = Vector2(1140, 545)
+rotation = 4.712389
+
+[node name="WallBasic41" parent="GrpWall" unique_id=1333470436 instance=ExtResource("4_hu0ol")]
+position = Vector2(1140, 445)
+rotation = 1.5707964
+
+[node name="WallBasic30" parent="GrpWall" unique_id=1465325937 instance=ExtResource("4_hu0ol")]
+position = Vector2(1140, 645)
+rotation = 7.853982
+
+[node name="WallBasic42" parent="GrpWall" unique_id=2069397976 instance=ExtResource("4_hu0ol")]
+position = Vector2(1140, 115)
+rotation = 4.712389
+
+[node name="WallBasic43" parent="GrpWall" unique_id=1510268629 instance=ExtResource("4_hu0ol")]
+position = Vector2(1140, 15)
+rotation = 1.5707964
+
+[node name="WallBasic31" parent="GrpWall" unique_id=1108279434 instance=ExtResource("4_hu0ol")]
+position = Vector2(1140, 215)
+rotation = 7.853982
+
+[node name="WallBasic1" parent="GrpWall" unique_id=2099891766 instance=ExtResource("4_hu0ol")]
+position = Vector2(213, 11)
+
+[node name="WallBasic8" parent="GrpWall" unique_id=143453616 instance=ExtResource("4_hu0ol")]
+position = Vector2(9, 11)
+
+[node name="WallBasic6" parent="GrpWall" unique_id=1495762631 instance=ExtResource("4_hu0ol")]
+position = Vector2(111, 11)
+rotation = 3.1415927
+
+[node name="WallBasic2" parent="GrpWall" unique_id=1283532041 instance=ExtResource("4_hu0ol")]
+position = Vector2(1147, 11)
+
+[node name="WallBasic9" parent="GrpWall" unique_id=1335866152 instance=ExtResource("4_hu0ol")]
+position = Vector2(943, 11)
+
+[node name="WallBasic7" parent="GrpWall" unique_id=891049452 instance=ExtResource("4_hu0ol")]
+position = Vector2(1045, 11)
+rotation = 3.1415927
+
+[node name="WallBasic3" parent="GrpWall" unique_id=1575544362 instance=ExtResource("4_hu0ol")]
+position = Vector2(1147, 636)
+
+[node name="WallBasic10" parent="GrpWall" unique_id=1900547441 instance=ExtResource("4_hu0ol")]
+position = Vector2(943, 636)
+
+[node name="WallBasic11" parent="GrpWall" unique_id=264066804 instance=ExtResource("4_hu0ol")]
+position = Vector2(1045, 636)
+rotation = 3.1415927
+
+[node name="WallBasic4" parent="GrpWall" unique_id=93251767 instance=ExtResource("4_hu0ol")]
+position = Vector2(211, 636)
+
+[node name="WallBasic12" parent="GrpWall" unique_id=476639994 instance=ExtResource("4_hu0ol")]
+position = Vector2(7, 636)
+
+[node name="WallBasic13" parent="GrpWall" unique_id=236901303 instance=ExtResource("4_hu0ol")]
+position = Vector2(109, 636)
+rotation = 3.1415927
+
+[node name="Node2D" type="Node2D" parent="GrpWall" unique_id=1731148349]
+position = Vector2(91, 1167)
+rotation = -2.3561945
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="WallBasic42" parent="GrpWall/Node2D" unique_id=1179061635 instance=ExtResource("4_hu0ol")]
+position = Vector2(590.33624, 511.3362)
+rotation = -0.7853982
+scale = Vector2(1, 1.12)
+
+[node name="WallBasic45" parent="GrpWall/Node2D" unique_id=1782234839 instance=ExtResource("4_hu0ol")]
+position = Vector2(263.04373, 504.87424)
+rotation = 3.926991
+scale = Vector2(0.88, 1)
+
+[node name="WallSquare13" parent="GrpWall/Node2D" unique_id=1275432058 instance=ExtResource("5_m47b0")]
+position = Vector2(294.1564, 535.98694)
+rotation = -2.3561945
+
+[node name="WallSquare16" parent="GrpWall/Node2D" unique_id=645008776 instance=ExtResource("5_m47b0")]
+position = Vector2(552.9575, 548.7149)
+rotation = -0.7853982
+
+[node name="Node2D2" type="Node2D" parent="GrpWall" unique_id=1014157222]
+position = Vector2(1671, 565)
+rotation = 2.3561943
+
+[node name="WallBasic42" parent="GrpWall/Node2D2" unique_id=1628722522 instance=ExtResource("4_hu0ol")]
+position = Vector2(590.3362, 511.33606)
+rotation = -0.7853982
+scale = Vector2(1, 1.12)
+
+[node name="WallBasic45" parent="GrpWall/Node2D2" unique_id=1480400862 instance=ExtResource("4_hu0ol")]
+position = Vector2(263.04373, 504.87424)
+rotation = 3.926991
+scale = Vector2(0.88, 1)
+
+[node name="WallSquare13" parent="GrpWall/Node2D2" unique_id=62457985 instance=ExtResource("5_m47b0")]
+position = Vector2(292.0351, 533.8657)
+rotation = -0.7853982
+
+[node name="WallSquare16" parent="GrpWall/Node2D2" unique_id=2016236009 instance=ExtResource("5_m47b0")]
+position = Vector2(555.7858, 545.8866)
+rotation = -0.7853982
+
+[node name="Node2D3" type="Node2D" parent="GrpWall" unique_id=253034003]
+position = Vector2(-516, 92)
+rotation = -0.7853982
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="WallBasic42" parent="GrpWall/Node2D3" unique_id=706762072 instance=ExtResource("4_hu0ol")]
+position = Vector2(590.3362, 511.33618)
+rotation = -0.7853982
+scale = Vector2(1, 1.12)
+
+[node name="WallBasic45" parent="GrpWall/Node2D3" unique_id=1744283573 instance=ExtResource("4_hu0ol")]
+position = Vector2(263.04373, 504.87424)
+rotation = 3.926991
+scale = Vector2(0.88, 1)
+
+[node name="WallSquare13" parent="GrpWall/Node2D3" unique_id=1727125601 instance=ExtResource("5_m47b0")]
+position = Vector2(290.62088, 532.4514)
+rotation = -0.7853982
+
+[node name="WallSquare16" parent="GrpWall/Node2D3" unique_id=1611167967 instance=ExtResource("5_m47b0")]
+position = Vector2(554.37177, 547.3007)
+rotation = -0.7853982
+
+[node name="Node2D4" type="Node2D" parent="GrpWall" unique_id=24656523]
+position = Vector2(1065, -514)
+rotation = 0.7853982
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="WallBasic42" parent="GrpWall/Node2D4" unique_id=2041634264 instance=ExtResource("4_hu0ol")]
+position = Vector2(590.3362, 511.33618)
+rotation = -0.7853982
+scale = Vector2(1, 1.12)
+
+[node name="WallBasic45" parent="GrpWall/Node2D4" unique_id=1477952418 instance=ExtResource("4_hu0ol")]
+position = Vector2(263.04373, 504.87424)
+rotation = 3.926991
+scale = Vector2(0.88, 1)
+
+[node name="WallSquare13" parent="GrpWall/Node2D4" unique_id=978408621 instance=ExtResource("5_m47b0")]
+position = Vector2(291.58475, 533.4153)
+rotation = -0.7853982
+
+[node name="WallSquare16" parent="GrpWall/Node2D4" unique_id=898676358 instance=ExtResource("5_m47b0")]
+position = Vector2(555.07886, 546.5936)
+rotation = -0.7853982
+
+[node name="GrpPNJ" type="Node" parent="." unique_id=1839669559]
+
+[node name="Animals1" parent="GrpPNJ" unique_id=544405098 instance=ExtResource("6_x7gsr")]
+position = Vector2(540, 217)
+
+[node name="Animals3" parent="GrpPNJ" unique_id=409801974 instance=ExtResource("6_x7gsr")]
+position = Vector2(636, 217)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals3" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals7" parent="GrpPNJ" unique_id=796737951 instance=ExtResource("6_x7gsr")]
+position = Vector2(471, 291)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals7" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals8" parent="GrpPNJ" unique_id=1894106512 instance=ExtResource("6_x7gsr")]
+position = Vector2(527, 453)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals8" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals9" parent="GrpPNJ" unique_id=1345725517 instance=ExtResource("6_x7gsr")]
+position = Vector2(537, 292)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals9" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals6" parent="GrpPNJ" unique_id=1580218831 instance=ExtResource("6_x7gsr")]
+position = Vector2(693, 384)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals6" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals12" parent="GrpPNJ" unique_id=542218213 instance=ExtResource("6_x7gsr")]
+position = Vector2(612, 382)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals12" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals15" parent="GrpPNJ" unique_id=1755451785 instance=ExtResource("6_x7gsr")]
+position = Vector2(69, 94)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals15" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals16" parent="GrpPNJ" unique_id=526595577 instance=ExtResource("6_x7gsr")]
+position = Vector2(1091, 555)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals16" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals2" parent="GrpPNJ" unique_id=397309686 instance=ExtResource("6_x7gsr")]
+position = Vector2(472, 381)
+
+[node name="Animals4" parent="GrpPNJ" unique_id=1915391617 instance=ExtResource("6_x7gsr")]
+position = Vector2(693, 297)
+
+[node name="Animals10" parent="GrpPNJ" unique_id=1970626431 instance=ExtResource("6_x7gsr")]
+position = Vector2(633, 451)
+
+[node name="Animals5" parent="GrpPNJ" unique_id=1698680091 instance=ExtResource("6_x7gsr")]
+position = Vector2(618, 295)
+
+[node name="Animals13" parent="GrpPNJ" unique_id=1965571285 instance=ExtResource("6_x7gsr")]
+position = Vector2(1078, 95)
+
+[node name="Animals14" parent="GrpPNJ" unique_id=975915963 instance=ExtResource("6_x7gsr")]
+position = Vector2(88, 560)
+
+[node name="Animals11" parent="GrpPNJ" unique_id=269462783 instance=ExtResource("6_x7gsr")]
+position = Vector2(546, 379)
+
+[node name="GrpBckground" type="Node" parent="." unique_id=363279919]
+
+[node name="Herbe1_300x8" type="Sprite2D" parent="GrpBckground" unique_id=644038217]
+z_index = -1
+position = Vector2(188.5, 138.50002)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_uk1uv")
+metadata/_edit_lock_ = true
+
+[node name="Herbe2_300x8" type="Sprite2D" parent="GrpBckground" unique_id=943249552]
+z_index = -1
+position = Vector2(579, 136)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_25373")
+metadata/_edit_lock_ = true
+
+[node name="Herbe1_300x9" type="Sprite2D" parent="GrpBckground" unique_id=1447941898]
+z_index = -1
+position = Vector2(188.5, 519.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_uk1uv")
+metadata/_edit_lock_ = true
+
+[node name="Herbe2_300x9" type="Sprite2D" parent="GrpBckground" unique_id=1468612175]
+z_index = -1
+position = Vector2(578.5, 519.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_25373")
+metadata/_edit_lock_ = true
+
+[node name="Herbe1_300x10" type="Sprite2D" parent="GrpBckground" unique_id=1330737313]
+z_index = -1
+position = Vector2(965.99994, 140.00003)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_uk1uv")
+metadata/_edit_lock_ = true
+
+[node name="Herbe2_300x10" type="Sprite2D" parent="GrpBckground" unique_id=1898562127]
+z_index = -1
+position = Vector2(968.50006, 529.50006)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_25373")
+metadata/_edit_lock_ = true
+
+[node name="Mask" parent="." unique_id=239077444 instance=ExtResource("9_vybpl")]
+position = Vector2(797, 66)
+mask_type = "Souris"
+
+[node name="Mask2" parent="." unique_id=882085928 instance=ExtResource("9_vybpl")]
+position = Vector2(343, 589)
+
+[editable path="GrpEnclos/Paddock"]
+[editable path="GrpEnclos/Paddock3"]
+[editable path="GrpEnclos/Paddock2"]
+[editable path="GrpEnclos/Paddock4"]
+[editable path="GrpPNJ/Animals3"]
+[editable path="GrpPNJ/Animals7"]
+[editable path="GrpPNJ/Animals8"]
+[editable path="GrpPNJ/Animals9"]
+[editable path="GrpPNJ/Animals6"]
+[editable path="GrpPNJ/Animals12"]
+[editable path="GrpPNJ/Animals15"]
+[editable path="GrpPNJ/Animals16"]

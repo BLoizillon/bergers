@@ -31,27 +31,25 @@ position = Vector2(426, 17)
 animal_count = 3
 
 [node name="Label" parent="GrpEnclos/Paddock" index="0" unique_id=1547415217]
-offset_left = -15.0
-offset_top = -16.0
-offset_right = 81.0
-offset_bottom = 21.0
-rotation = 1.5707964
+offset_left = 30.0
+offset_top = 23.0
+offset_right = 126.0
+offset_bottom = 60.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GrpEnclos/Paddock" unique_id=131125346]
 polygon = PackedVector2Array(0, 0, 148, 0, 149, 624, 5, 622)
 
-[node name="Paddock" parent="GrpEnclos/Paddock" unique_id=258759384 instance=ExtResource("3_7dov7")]
-position = Vector2(159, -3)
+[node name="Paddock2" parent="GrpEnclos" unique_id=258759384 instance=ExtResource("3_7dov7")]
+position = Vector2(585, 14)
 animal_count = 3
 
-[node name="Label" parent="GrpEnclos/Paddock/Paddock" index="0" unique_id=1547415217]
-offset_left = 198.0
-offset_top = -11.0
-offset_right = 294.0
-offset_bottom = 26.0
-rotation = 1.5707964
+[node name="Label" parent="GrpEnclos/Paddock2" index="0" unique_id=1547415217]
+offset_left = 25.0
+offset_top = 26.0
+offset_right = 121.0
+offset_bottom = 63.0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GrpEnclos/Paddock/Paddock" unique_id=422444254]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GrpEnclos/Paddock2" unique_id=422444254]
 polygon = PackedVector2Array(0, 0, 148, 0, 149, 624, 5, 622)
 
 [node name="GrpWall" type="Node" parent="." unique_id=472281946]
@@ -240,4 +238,4 @@ unique_name_in_owner = true
 visible = false
 
 [editable path="GrpEnclos/Paddock"]
-[editable path="GrpEnclos/Paddock/Paddock"]
+[editable path="GrpEnclos/Paddock2"]
