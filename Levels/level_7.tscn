@@ -1,0 +1,1860 @@
+[gd_scene format=3 uid="uid://cojs5134qasg"]
+
+[ext_resource type="PackedScene" uid="uid://br42s7j4mbp0b" path="res://player.tscn" id="1_krg5q"]
+[ext_resource type="Script" uid="uid://c3gd2afgti2yh" path="res://victory.gd" id="2_gljo5"]
+[ext_resource type="PackedScene" path="res://Walls/wall_basic.tscn" id="4_iv344"]
+[ext_resource type="PackedScene" uid="uid://cbdv820rg3who" path="res://animals.tscn" id="6_hoj1y"]
+[ext_resource type="Texture2D" uid="uid://ddcyg7o4tcomo" path="res://Assets/Herbe_1@300x-8.png" id="7_0y6jj"]
+[ext_resource type="Texture2D" uid="uid://wdti4c427mim" path="res://Crédits@300x-8.png" id="8_sdkrb"]
+[ext_resource type="Texture2D" uid="uid://ciqljjshkxsoq" path="res://Assets/Herbe_2@300x-8.png" id="8_vulay"]
+[ext_resource type="PackedScene" uid="uid://ceyis8w3cd1eq" path="res://mask.tscn" id="9_1k73j"]
+
+[node name="Level1" type="Node2D" unique_id=1801627583]
+position = Vector2(0, 5)
+
+[node name="Player1" parent="." unique_id=981124934 instance=ExtResource("1_krg5q")]
+position = Vector2(81, 102)
+
+[node name="Player2" parent="." unique_id=1094857113 instance=ExtResource("1_krg5q")]
+position = Vector2(1057, 98)
+player_id = 1
+
+[node name="GrpEnclos" type="Node" parent="." unique_id=655392166]
+script = ExtResource("2_gljo5")
+next_level_path = "res://level_2.tscn"
+
+[node name="GrpWall" type="Node" parent="." unique_id=472281946]
+
+[node name="Invisible_Wall" parent="GrpWall" unique_id=360388285 instance=ExtResource("4_iv344")]
+position = Vector2(1174, 341)
+rotation = -1.5707964
+scale = Vector2(6.600001, 1)
+
+[node name="Invisible_Wall2" parent="GrpWall" unique_id=579604825 instance=ExtResource("4_iv344")]
+position = Vector2(-24, 327)
+rotation = 1.5707964
+scale = Vector2(6.5599985, 1)
+
+[node name="Invisible_Wall3" parent="GrpWall" unique_id=85335178 instance=ExtResource("4_iv344")]
+position = Vector2(582, -17)
+rotation = 3.1415927
+scale = Vector2(10.080002, 1)
+
+[node name="Invisible_Wall4" parent="GrpWall" unique_id=1418254105 instance=ExtResource("4_iv344")]
+position = Vector2(574, 668)
+scale = Vector2(10.080002, 1)
+
+[node name="GrpPNJ" type="Node" parent="." unique_id=1839669559]
+
+[node name="Animals1" parent="GrpPNJ" unique_id=544405098 instance=ExtResource("6_hoj1y")]
+position = Vector2(540, 243)
+
+[node name="Animals3" parent="GrpPNJ" unique_id=409801974 instance=ExtResource("6_hoj1y")]
+position = Vector2(636, 243)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals3" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals7" parent="GrpPNJ" unique_id=796737951 instance=ExtResource("6_hoj1y")]
+position = Vector2(471, 317)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals7" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals8" parent="GrpPNJ" unique_id=1894106512 instance=ExtResource("6_hoj1y")]
+position = Vector2(527, 479)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals8" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals9" parent="GrpPNJ" unique_id=1345725517 instance=ExtResource("6_hoj1y")]
+position = Vector2(537, 318)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals9" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals6" parent="GrpPNJ" unique_id=1580218831 instance=ExtResource("6_hoj1y")]
+position = Vector2(693, 410)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals6" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals12" parent="GrpPNJ" unique_id=542218213 instance=ExtResource("6_hoj1y")]
+position = Vector2(612, 408)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals12" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals2" parent="GrpPNJ" unique_id=397309686 instance=ExtResource("6_hoj1y")]
+position = Vector2(472, 407)
+
+[node name="Animals4" parent="GrpPNJ" unique_id=1915391617 instance=ExtResource("6_hoj1y")]
+position = Vector2(693, 323)
+
+[node name="Animals10" parent="GrpPNJ" unique_id=1970626431 instance=ExtResource("6_hoj1y")]
+position = Vector2(633, 477)
+
+[node name="Animals5" parent="GrpPNJ" unique_id=1698680091 instance=ExtResource("6_hoj1y")]
+position = Vector2(618, 321)
+
+[node name="Animals11" parent="GrpPNJ" unique_id=269462783 instance=ExtResource("6_hoj1y")]
+position = Vector2(546, 405)
+
+[node name="Animals13" parent="GrpPNJ" unique_id=543998922 instance=ExtResource("6_hoj1y")]
+position = Vector2(195, 216)
+
+[node name="Animals14" parent="GrpPNJ" unique_id=2122510784 instance=ExtResource("6_hoj1y")]
+position = Vector2(291, 216)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals14" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals15" parent="GrpPNJ" unique_id=1225950988 instance=ExtResource("6_hoj1y")]
+position = Vector2(126, 290)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals15" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals16" parent="GrpPNJ" unique_id=537554125 instance=ExtResource("6_hoj1y")]
+position = Vector2(182, 452)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals16" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals17" parent="GrpPNJ" unique_id=2092323033 instance=ExtResource("6_hoj1y")]
+position = Vector2(192, 291)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals17" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals18" parent="GrpPNJ" unique_id=352966650 instance=ExtResource("6_hoj1y")]
+position = Vector2(348, 383)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals18" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals19" parent="GrpPNJ" unique_id=1535204438 instance=ExtResource("6_hoj1y")]
+position = Vector2(267, 381)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals19" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals20" parent="GrpPNJ" unique_id=2007121431 instance=ExtResource("6_hoj1y")]
+position = Vector2(127, 380)
+
+[node name="Animals21" parent="GrpPNJ" unique_id=132637819 instance=ExtResource("6_hoj1y")]
+position = Vector2(348, 296)
+
+[node name="Animals22" parent="GrpPNJ" unique_id=911066259 instance=ExtResource("6_hoj1y")]
+position = Vector2(288, 450)
+
+[node name="Animals23" parent="GrpPNJ" unique_id=442151829 instance=ExtResource("6_hoj1y")]
+position = Vector2(273, 294)
+
+[node name="Animals24" parent="GrpPNJ" unique_id=1053248338 instance=ExtResource("6_hoj1y")]
+position = Vector2(201, 378)
+
+[node name="Animals25" parent="GrpPNJ" unique_id=1569792967 instance=ExtResource("6_hoj1y")]
+position = Vector2(240, 180)
+
+[node name="Animals26" parent="GrpPNJ" unique_id=1305344938 instance=ExtResource("6_hoj1y")]
+position = Vector2(336, 180)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals26" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals27" parent="GrpPNJ" unique_id=2095247934 instance=ExtResource("6_hoj1y")]
+position = Vector2(171, 254)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals27" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals28" parent="GrpPNJ" unique_id=86982418 instance=ExtResource("6_hoj1y")]
+position = Vector2(227, 416)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals28" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals29" parent="GrpPNJ" unique_id=1024533724 instance=ExtResource("6_hoj1y")]
+position = Vector2(237, 255)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals29" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals30" parent="GrpPNJ" unique_id=1784525843 instance=ExtResource("6_hoj1y")]
+position = Vector2(393, 347)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals30" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals31" parent="GrpPNJ" unique_id=1162837283 instance=ExtResource("6_hoj1y")]
+position = Vector2(312, 345)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals31" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals32" parent="GrpPNJ" unique_id=587502147 instance=ExtResource("6_hoj1y")]
+position = Vector2(172, 344)
+
+[node name="Animals33" parent="GrpPNJ" unique_id=1712955436 instance=ExtResource("6_hoj1y")]
+position = Vector2(393, 260)
+
+[node name="Animals34" parent="GrpPNJ" unique_id=1976237087 instance=ExtResource("6_hoj1y")]
+position = Vector2(333, 414)
+
+[node name="Animals35" parent="GrpPNJ" unique_id=289435627 instance=ExtResource("6_hoj1y")]
+position = Vector2(318, 258)
+
+[node name="Animals36" parent="GrpPNJ" unique_id=557678018 instance=ExtResource("6_hoj1y")]
+position = Vector2(246, 342)
+
+[node name="Animals37" parent="GrpPNJ" unique_id=1237933449 instance=ExtResource("6_hoj1y")]
+position = Vector2(257, 219)
+
+[node name="Animals38" parent="GrpPNJ" unique_id=1901402442 instance=ExtResource("6_hoj1y")]
+position = Vector2(353, 219)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals38" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals39" parent="GrpPNJ" unique_id=1565998064 instance=ExtResource("6_hoj1y")]
+position = Vector2(188, 293)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals39" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals40" parent="GrpPNJ" unique_id=1985569579 instance=ExtResource("6_hoj1y")]
+position = Vector2(244, 455)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals40" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals41" parent="GrpPNJ" unique_id=439043904 instance=ExtResource("6_hoj1y")]
+position = Vector2(254, 294)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals41" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals42" parent="GrpPNJ" unique_id=1730126783 instance=ExtResource("6_hoj1y")]
+position = Vector2(410, 386)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals42" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals43" parent="GrpPNJ" unique_id=1340105250 instance=ExtResource("6_hoj1y")]
+position = Vector2(329, 384)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals43" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals44" parent="GrpPNJ" unique_id=891244020 instance=ExtResource("6_hoj1y")]
+position = Vector2(189, 383)
+
+[node name="Animals45" parent="GrpPNJ" unique_id=1502493439 instance=ExtResource("6_hoj1y")]
+position = Vector2(410, 299)
+
+[node name="Animals46" parent="GrpPNJ" unique_id=1018182126 instance=ExtResource("6_hoj1y")]
+position = Vector2(350, 453)
+
+[node name="Animals47" parent="GrpPNJ" unique_id=1893635996 instance=ExtResource("6_hoj1y")]
+position = Vector2(335, 297)
+
+[node name="Animals48" parent="GrpPNJ" unique_id=1096675230 instance=ExtResource("6_hoj1y")]
+position = Vector2(263, 381)
+
+[node name="Animals49" parent="GrpPNJ" unique_id=694070140 instance=ExtResource("6_hoj1y")]
+position = Vector2(211, 231)
+
+[node name="Animals50" parent="GrpPNJ" unique_id=730374846 instance=ExtResource("6_hoj1y")]
+position = Vector2(307, 231)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals50" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals51" parent="GrpPNJ" unique_id=1157259925 instance=ExtResource("6_hoj1y")]
+position = Vector2(142, 305)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals51" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals52" parent="GrpPNJ" unique_id=663970799 instance=ExtResource("6_hoj1y")]
+position = Vector2(198, 467)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals52" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals53" parent="GrpPNJ" unique_id=2081311219 instance=ExtResource("6_hoj1y")]
+position = Vector2(208, 306)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals53" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals54" parent="GrpPNJ" unique_id=516737466 instance=ExtResource("6_hoj1y")]
+position = Vector2(364, 398)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals54" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals55" parent="GrpPNJ" unique_id=1361328310 instance=ExtResource("6_hoj1y")]
+position = Vector2(283, 396)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals55" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals56" parent="GrpPNJ" unique_id=178269616 instance=ExtResource("6_hoj1y")]
+position = Vector2(143, 395)
+
+[node name="Animals57" parent="GrpPNJ" unique_id=1245397791 instance=ExtResource("6_hoj1y")]
+position = Vector2(364, 311)
+
+[node name="Animals58" parent="GrpPNJ" unique_id=1644562745 instance=ExtResource("6_hoj1y")]
+position = Vector2(304, 465)
+
+[node name="Animals59" parent="GrpPNJ" unique_id=1942385394 instance=ExtResource("6_hoj1y")]
+position = Vector2(289, 309)
+
+[node name="Animals60" parent="GrpPNJ" unique_id=975697544 instance=ExtResource("6_hoj1y")]
+position = Vector2(217, 393)
+
+[node name="Animals61" parent="GrpPNJ" unique_id=1205087821 instance=ExtResource("6_hoj1y")]
+position = Vector2(232, 200)
+
+[node name="Animals62" parent="GrpPNJ" unique_id=352301977 instance=ExtResource("6_hoj1y")]
+position = Vector2(328, 200)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals62" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals63" parent="GrpPNJ" unique_id=2022324735 instance=ExtResource("6_hoj1y")]
+position = Vector2(163, 274)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals63" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals64" parent="GrpPNJ" unique_id=801413485 instance=ExtResource("6_hoj1y")]
+position = Vector2(219, 436)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals64" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals65" parent="GrpPNJ" unique_id=1266279970 instance=ExtResource("6_hoj1y")]
+position = Vector2(229, 275)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals65" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals66" parent="GrpPNJ" unique_id=2042566805 instance=ExtResource("6_hoj1y")]
+position = Vector2(385, 367)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals66" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals67" parent="GrpPNJ" unique_id=1998648351 instance=ExtResource("6_hoj1y")]
+position = Vector2(304, 365)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals67" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals68" parent="GrpPNJ" unique_id=1922584343 instance=ExtResource("6_hoj1y")]
+position = Vector2(164, 364)
+
+[node name="Animals69" parent="GrpPNJ" unique_id=248077732 instance=ExtResource("6_hoj1y")]
+position = Vector2(385, 280)
+
+[node name="Animals70" parent="GrpPNJ" unique_id=386443831 instance=ExtResource("6_hoj1y")]
+position = Vector2(325, 434)
+
+[node name="Animals71" parent="GrpPNJ" unique_id=298059248 instance=ExtResource("6_hoj1y")]
+position = Vector2(310, 278)
+
+[node name="Animals72" parent="GrpPNJ" unique_id=1873974992 instance=ExtResource("6_hoj1y")]
+position = Vector2(238, 362)
+
+[node name="Animals73" parent="GrpPNJ" unique_id=251088999 instance=ExtResource("6_hoj1y")]
+position = Vector2(295, 215)
+
+[node name="Animals74" parent="GrpPNJ" unique_id=139783739 instance=ExtResource("6_hoj1y")]
+position = Vector2(391, 215)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals74" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals75" parent="GrpPNJ" unique_id=1012017371 instance=ExtResource("6_hoj1y")]
+position = Vector2(226, 289)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals75" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals76" parent="GrpPNJ" unique_id=2043867421 instance=ExtResource("6_hoj1y")]
+position = Vector2(282, 451)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals76" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals77" parent="GrpPNJ" unique_id=2038739371 instance=ExtResource("6_hoj1y")]
+position = Vector2(292, 290)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals77" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals78" parent="GrpPNJ" unique_id=1845360269 instance=ExtResource("6_hoj1y")]
+position = Vector2(448, 382)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals78" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals79" parent="GrpPNJ" unique_id=685728920 instance=ExtResource("6_hoj1y")]
+position = Vector2(367, 380)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals79" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals80" parent="GrpPNJ" unique_id=1969316542 instance=ExtResource("6_hoj1y")]
+position = Vector2(227, 379)
+
+[node name="Animals81" parent="GrpPNJ" unique_id=457757442 instance=ExtResource("6_hoj1y")]
+position = Vector2(448, 295)
+
+[node name="Animals82" parent="GrpPNJ" unique_id=570485725 instance=ExtResource("6_hoj1y")]
+position = Vector2(388, 449)
+
+[node name="Animals83" parent="GrpPNJ" unique_id=1717560249 instance=ExtResource("6_hoj1y")]
+position = Vector2(373, 293)
+
+[node name="Animals84" parent="GrpPNJ" unique_id=1609986495 instance=ExtResource("6_hoj1y")]
+position = Vector2(301, 377)
+
+[node name="Animals85" parent="GrpPNJ" unique_id=83685348 instance=ExtResource("6_hoj1y")]
+position = Vector2(286, 180)
+
+[node name="Animals86" parent="GrpPNJ" unique_id=541519379 instance=ExtResource("6_hoj1y")]
+position = Vector2(382, 180)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals86" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals87" parent="GrpPNJ" unique_id=2085523943 instance=ExtResource("6_hoj1y")]
+position = Vector2(217, 254)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals87" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals88" parent="GrpPNJ" unique_id=547939015 instance=ExtResource("6_hoj1y")]
+position = Vector2(273, 416)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals88" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals89" parent="GrpPNJ" unique_id=1635223733 instance=ExtResource("6_hoj1y")]
+position = Vector2(283, 255)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals89" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals90" parent="GrpPNJ" unique_id=68995047 instance=ExtResource("6_hoj1y")]
+position = Vector2(439, 347)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals90" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals91" parent="GrpPNJ" unique_id=2014776814 instance=ExtResource("6_hoj1y")]
+position = Vector2(358, 345)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals91" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals92" parent="GrpPNJ" unique_id=403999994 instance=ExtResource("6_hoj1y")]
+position = Vector2(218, 344)
+
+[node name="Animals93" parent="GrpPNJ" unique_id=1971973032 instance=ExtResource("6_hoj1y")]
+position = Vector2(439, 260)
+
+[node name="Animals94" parent="GrpPNJ" unique_id=1007418119 instance=ExtResource("6_hoj1y")]
+position = Vector2(379, 414)
+
+[node name="Animals95" parent="GrpPNJ" unique_id=1535467874 instance=ExtResource("6_hoj1y")]
+position = Vector2(364, 258)
+
+[node name="Animals96" parent="GrpPNJ" unique_id=1356008008 instance=ExtResource("6_hoj1y")]
+position = Vector2(292, 342)
+
+[node name="Animals97" parent="GrpPNJ" unique_id=1130771750 instance=ExtResource("6_hoj1y")]
+position = Vector2(360, 221)
+
+[node name="Animals98" parent="GrpPNJ" unique_id=297259546 instance=ExtResource("6_hoj1y")]
+position = Vector2(456, 221)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals98" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals99" parent="GrpPNJ" unique_id=1478935334 instance=ExtResource("6_hoj1y")]
+position = Vector2(291, 295)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals99" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals100" parent="GrpPNJ" unique_id=1564733041 instance=ExtResource("6_hoj1y")]
+position = Vector2(347, 457)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals100" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals101" parent="GrpPNJ" unique_id=455636928 instance=ExtResource("6_hoj1y")]
+position = Vector2(357, 296)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals101" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals102" parent="GrpPNJ" unique_id=1765839172 instance=ExtResource("6_hoj1y")]
+position = Vector2(513, 388)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals102" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals103" parent="GrpPNJ" unique_id=1604331664 instance=ExtResource("6_hoj1y")]
+position = Vector2(432, 386)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals103" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals104" parent="GrpPNJ" unique_id=1171196746 instance=ExtResource("6_hoj1y")]
+position = Vector2(292, 385)
+
+[node name="Animals105" parent="GrpPNJ" unique_id=1209309230 instance=ExtResource("6_hoj1y")]
+position = Vector2(513, 301)
+
+[node name="Animals106" parent="GrpPNJ" unique_id=1479226012 instance=ExtResource("6_hoj1y")]
+position = Vector2(453, 455)
+
+[node name="Animals107" parent="GrpPNJ" unique_id=1179095483 instance=ExtResource("6_hoj1y")]
+position = Vector2(438, 299)
+
+[node name="Animals108" parent="GrpPNJ" unique_id=1710433808 instance=ExtResource("6_hoj1y")]
+position = Vector2(366, 383)
+
+[node name="Animals109" parent="GrpPNJ" unique_id=151068995 instance=ExtResource("6_hoj1y")]
+position = Vector2(387, 214)
+
+[node name="Animals110" parent="GrpPNJ" unique_id=344278571 instance=ExtResource("6_hoj1y")]
+position = Vector2(483, 214)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals110" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals111" parent="GrpPNJ" unique_id=1972072578 instance=ExtResource("6_hoj1y")]
+position = Vector2(318, 288)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals111" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals112" parent="GrpPNJ" unique_id=1517292631 instance=ExtResource("6_hoj1y")]
+position = Vector2(374, 450)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals112" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals113" parent="GrpPNJ" unique_id=438076316 instance=ExtResource("6_hoj1y")]
+position = Vector2(384, 289)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals113" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals114" parent="GrpPNJ" unique_id=1907841968 instance=ExtResource("6_hoj1y")]
+position = Vector2(540, 381)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals114" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals115" parent="GrpPNJ" unique_id=1464746217 instance=ExtResource("6_hoj1y")]
+position = Vector2(459, 379)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals115" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals116" parent="GrpPNJ" unique_id=546295471 instance=ExtResource("6_hoj1y")]
+position = Vector2(319, 378)
+
+[node name="Animals117" parent="GrpPNJ" unique_id=1271733079 instance=ExtResource("6_hoj1y")]
+position = Vector2(540, 294)
+
+[node name="Animals118" parent="GrpPNJ" unique_id=748662569 instance=ExtResource("6_hoj1y")]
+position = Vector2(480, 448)
+
+[node name="Animals119" parent="GrpPNJ" unique_id=2087828574 instance=ExtResource("6_hoj1y")]
+position = Vector2(465, 292)
+
+[node name="Animals120" parent="GrpPNJ" unique_id=1534573349 instance=ExtResource("6_hoj1y")]
+position = Vector2(393, 376)
+
+[node name="Animals121" parent="GrpPNJ" unique_id=1194111918 instance=ExtResource("6_hoj1y")]
+position = Vector2(432, 201)
+
+[node name="Animals122" parent="GrpPNJ" unique_id=1376609485 instance=ExtResource("6_hoj1y")]
+position = Vector2(528, 201)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals122" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals123" parent="GrpPNJ" unique_id=1416041407 instance=ExtResource("6_hoj1y")]
+position = Vector2(363, 275)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals123" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals124" parent="GrpPNJ" unique_id=1190041312 instance=ExtResource("6_hoj1y")]
+position = Vector2(419, 437)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals124" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals125" parent="GrpPNJ" unique_id=1018948871 instance=ExtResource("6_hoj1y")]
+position = Vector2(429, 276)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals125" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals126" parent="GrpPNJ" unique_id=1832452901 instance=ExtResource("6_hoj1y")]
+position = Vector2(585, 368)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals126" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals127" parent="GrpPNJ" unique_id=13886285 instance=ExtResource("6_hoj1y")]
+position = Vector2(504, 366)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals127" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals128" parent="GrpPNJ" unique_id=1041858953 instance=ExtResource("6_hoj1y")]
+position = Vector2(364, 365)
+
+[node name="Animals129" parent="GrpPNJ" unique_id=910600939 instance=ExtResource("6_hoj1y")]
+position = Vector2(585, 281)
+
+[node name="Animals130" parent="GrpPNJ" unique_id=1965171163 instance=ExtResource("6_hoj1y")]
+position = Vector2(525, 435)
+
+[node name="Animals131" parent="GrpPNJ" unique_id=1256980220 instance=ExtResource("6_hoj1y")]
+position = Vector2(510, 279)
+
+[node name="Animals132" parent="GrpPNJ" unique_id=342004674 instance=ExtResource("6_hoj1y")]
+position = Vector2(438, 363)
+
+[node name="Animals133" parent="GrpPNJ" unique_id=228055479 instance=ExtResource("6_hoj1y")]
+position = Vector2(430, 182)
+
+[node name="Animals134" parent="GrpPNJ" unique_id=1153866477 instance=ExtResource("6_hoj1y")]
+position = Vector2(526, 182)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals134" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals135" parent="GrpPNJ" unique_id=1287966722 instance=ExtResource("6_hoj1y")]
+position = Vector2(361, 256)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals135" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals136" parent="GrpPNJ" unique_id=56369631 instance=ExtResource("6_hoj1y")]
+position = Vector2(417, 418)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals136" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals137" parent="GrpPNJ" unique_id=102728642 instance=ExtResource("6_hoj1y")]
+position = Vector2(427, 257)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals137" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals138" parent="GrpPNJ" unique_id=1402730849 instance=ExtResource("6_hoj1y")]
+position = Vector2(583, 349)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals138" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals139" parent="GrpPNJ" unique_id=460636248 instance=ExtResource("6_hoj1y")]
+position = Vector2(502, 347)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals139" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals140" parent="GrpPNJ" unique_id=659817131 instance=ExtResource("6_hoj1y")]
+position = Vector2(362, 346)
+
+[node name="Animals141" parent="GrpPNJ" unique_id=677909749 instance=ExtResource("6_hoj1y")]
+position = Vector2(583, 262)
+
+[node name="Animals142" parent="GrpPNJ" unique_id=494436428 instance=ExtResource("6_hoj1y")]
+position = Vector2(523, 416)
+
+[node name="Animals143" parent="GrpPNJ" unique_id=61915727 instance=ExtResource("6_hoj1y")]
+position = Vector2(508, 260)
+
+[node name="Animals144" parent="GrpPNJ" unique_id=2087592034 instance=ExtResource("6_hoj1y")]
+position = Vector2(436, 344)
+
+[node name="Animals145" parent="GrpPNJ" unique_id=768426163 instance=ExtResource("6_hoj1y")]
+position = Vector2(404, 180)
+
+[node name="Animals146" parent="GrpPNJ" unique_id=237630455 instance=ExtResource("6_hoj1y")]
+position = Vector2(500, 180)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals146" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals147" parent="GrpPNJ" unique_id=74602884 instance=ExtResource("6_hoj1y")]
+position = Vector2(335, 254)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals147" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals148" parent="GrpPNJ" unique_id=314390007 instance=ExtResource("6_hoj1y")]
+position = Vector2(391, 416)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals148" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals149" parent="GrpPNJ" unique_id=659995001 instance=ExtResource("6_hoj1y")]
+position = Vector2(401, 255)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals149" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals150" parent="GrpPNJ" unique_id=1093646082 instance=ExtResource("6_hoj1y")]
+position = Vector2(557, 347)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals150" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals151" parent="GrpPNJ" unique_id=766475494 instance=ExtResource("6_hoj1y")]
+position = Vector2(476, 345)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals151" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals152" parent="GrpPNJ" unique_id=410498635 instance=ExtResource("6_hoj1y")]
+position = Vector2(336, 344)
+
+[node name="Animals153" parent="GrpPNJ" unique_id=932190851 instance=ExtResource("6_hoj1y")]
+position = Vector2(557, 260)
+
+[node name="Animals154" parent="GrpPNJ" unique_id=343687352 instance=ExtResource("6_hoj1y")]
+position = Vector2(497, 414)
+
+[node name="Animals155" parent="GrpPNJ" unique_id=680112218 instance=ExtResource("6_hoj1y")]
+position = Vector2(482, 258)
+
+[node name="Animals156" parent="GrpPNJ" unique_id=7370012 instance=ExtResource("6_hoj1y")]
+position = Vector2(410, 342)
+
+[node name="Animals157" parent="GrpPNJ" unique_id=174307448 instance=ExtResource("6_hoj1y")]
+position = Vector2(537, 219)
+
+[node name="Animals158" parent="GrpPNJ" unique_id=1616215561 instance=ExtResource("6_hoj1y")]
+position = Vector2(633, 219)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals158" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals159" parent="GrpPNJ" unique_id=1800746395 instance=ExtResource("6_hoj1y")]
+position = Vector2(468, 293)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals159" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals160" parent="GrpPNJ" unique_id=1205566583 instance=ExtResource("6_hoj1y")]
+position = Vector2(524, 455)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals160" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals161" parent="GrpPNJ" unique_id=280872977 instance=ExtResource("6_hoj1y")]
+position = Vector2(534, 294)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals161" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals162" parent="GrpPNJ" unique_id=1559899389 instance=ExtResource("6_hoj1y")]
+position = Vector2(690, 386)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals162" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals163" parent="GrpPNJ" unique_id=1480615998 instance=ExtResource("6_hoj1y")]
+position = Vector2(609, 384)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals163" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals164" parent="GrpPNJ" unique_id=897184134 instance=ExtResource("6_hoj1y")]
+position = Vector2(469, 383)
+
+[node name="Animals165" parent="GrpPNJ" unique_id=10863038 instance=ExtResource("6_hoj1y")]
+position = Vector2(690, 299)
+
+[node name="Animals166" parent="GrpPNJ" unique_id=1190108836 instance=ExtResource("6_hoj1y")]
+position = Vector2(630, 453)
+
+[node name="Animals167" parent="GrpPNJ" unique_id=562283629 instance=ExtResource("6_hoj1y")]
+position = Vector2(615, 297)
+
+[node name="Animals168" parent="GrpPNJ" unique_id=392224535 instance=ExtResource("6_hoj1y")]
+position = Vector2(543, 381)
+
+[node name="Animals169" parent="GrpPNJ" unique_id=1649890542 instance=ExtResource("6_hoj1y")]
+position = Vector2(583, 212)
+
+[node name="Animals170" parent="GrpPNJ" unique_id=1719079448 instance=ExtResource("6_hoj1y")]
+position = Vector2(679, 212)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals170" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals171" parent="GrpPNJ" unique_id=1913093640 instance=ExtResource("6_hoj1y")]
+position = Vector2(514, 286)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals171" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals172" parent="GrpPNJ" unique_id=1285204568 instance=ExtResource("6_hoj1y")]
+position = Vector2(570, 448)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals172" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals173" parent="GrpPNJ" unique_id=875156800 instance=ExtResource("6_hoj1y")]
+position = Vector2(580, 287)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals173" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals174" parent="GrpPNJ" unique_id=1099244094 instance=ExtResource("6_hoj1y")]
+position = Vector2(736, 379)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals174" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals175" parent="GrpPNJ" unique_id=1615736840 instance=ExtResource("6_hoj1y")]
+position = Vector2(655, 377)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals175" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals176" parent="GrpPNJ" unique_id=774202581 instance=ExtResource("6_hoj1y")]
+position = Vector2(515, 376)
+
+[node name="Animals177" parent="GrpPNJ" unique_id=473283705 instance=ExtResource("6_hoj1y")]
+position = Vector2(736, 292)
+
+[node name="Animals178" parent="GrpPNJ" unique_id=694906062 instance=ExtResource("6_hoj1y")]
+position = Vector2(676, 446)
+
+[node name="Animals179" parent="GrpPNJ" unique_id=258796997 instance=ExtResource("6_hoj1y")]
+position = Vector2(661, 290)
+
+[node name="Animals180" parent="GrpPNJ" unique_id=1560617379 instance=ExtResource("6_hoj1y")]
+position = Vector2(589, 374)
+
+[node name="Animals181" parent="GrpPNJ" unique_id=1726221068 instance=ExtResource("6_hoj1y")]
+position = Vector2(629, 243)
+
+[node name="Animals182" parent="GrpPNJ" unique_id=406662824 instance=ExtResource("6_hoj1y")]
+position = Vector2(725, 243)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals182" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals183" parent="GrpPNJ" unique_id=790620198 instance=ExtResource("6_hoj1y")]
+position = Vector2(560, 317)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals183" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals184" parent="GrpPNJ" unique_id=399830836 instance=ExtResource("6_hoj1y")]
+position = Vector2(616, 479)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals184" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals185" parent="GrpPNJ" unique_id=827639550 instance=ExtResource("6_hoj1y")]
+position = Vector2(626, 318)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals185" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals186" parent="GrpPNJ" unique_id=12220275 instance=ExtResource("6_hoj1y")]
+position = Vector2(782, 410)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals186" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals187" parent="GrpPNJ" unique_id=660857857 instance=ExtResource("6_hoj1y")]
+position = Vector2(701, 408)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals187" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals188" parent="GrpPNJ" unique_id=1231252536 instance=ExtResource("6_hoj1y")]
+position = Vector2(561, 407)
+
+[node name="Animals189" parent="GrpPNJ" unique_id=1828259315 instance=ExtResource("6_hoj1y")]
+position = Vector2(782, 323)
+
+[node name="Animals190" parent="GrpPNJ" unique_id=314178057 instance=ExtResource("6_hoj1y")]
+position = Vector2(722, 477)
+
+[node name="Animals191" parent="GrpPNJ" unique_id=1467510150 instance=ExtResource("6_hoj1y")]
+position = Vector2(707, 321)
+
+[node name="Animals192" parent="GrpPNJ" unique_id=269025441 instance=ExtResource("6_hoj1y")]
+position = Vector2(635, 405)
+
+[node name="Animals193" parent="GrpPNJ" unique_id=1833551540 instance=ExtResource("6_hoj1y")]
+position = Vector2(730, 204)
+
+[node name="Animals194" parent="GrpPNJ" unique_id=1029314143 instance=ExtResource("6_hoj1y")]
+position = Vector2(826, 204)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals194" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals195" parent="GrpPNJ" unique_id=1121647574 instance=ExtResource("6_hoj1y")]
+position = Vector2(661, 278)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals195" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals196" parent="GrpPNJ" unique_id=927776057 instance=ExtResource("6_hoj1y")]
+position = Vector2(717, 440)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals196" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals197" parent="GrpPNJ" unique_id=1444917338 instance=ExtResource("6_hoj1y")]
+position = Vector2(727, 279)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals197" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals198" parent="GrpPNJ" unique_id=405580849 instance=ExtResource("6_hoj1y")]
+position = Vector2(883, 371)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals198" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals199" parent="GrpPNJ" unique_id=1564956784 instance=ExtResource("6_hoj1y")]
+position = Vector2(802, 369)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals199" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals200" parent="GrpPNJ" unique_id=1019351633 instance=ExtResource("6_hoj1y")]
+position = Vector2(662, 368)
+
+[node name="Animals201" parent="GrpPNJ" unique_id=1137678209 instance=ExtResource("6_hoj1y")]
+position = Vector2(883, 284)
+
+[node name="Animals202" parent="GrpPNJ" unique_id=2101196754 instance=ExtResource("6_hoj1y")]
+position = Vector2(823, 438)
+
+[node name="Animals203" parent="GrpPNJ" unique_id=1555374112 instance=ExtResource("6_hoj1y")]
+position = Vector2(808, 282)
+
+[node name="Animals204" parent="GrpPNJ" unique_id=921355002 instance=ExtResource("6_hoj1y")]
+position = Vector2(736, 366)
+
+[node name="Animals205" parent="GrpPNJ" unique_id=2013096647 instance=ExtResource("6_hoj1y")]
+position = Vector2(698, 183)
+
+[node name="Animals206" parent="GrpPNJ" unique_id=1598264048 instance=ExtResource("6_hoj1y")]
+position = Vector2(794, 183)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals206" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals207" parent="GrpPNJ" unique_id=104077248 instance=ExtResource("6_hoj1y")]
+position = Vector2(629, 257)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals207" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals208" parent="GrpPNJ" unique_id=57563579 instance=ExtResource("6_hoj1y")]
+position = Vector2(685, 419)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals208" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals209" parent="GrpPNJ" unique_id=1747220226 instance=ExtResource("6_hoj1y")]
+position = Vector2(695, 258)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals209" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals210" parent="GrpPNJ" unique_id=296389329 instance=ExtResource("6_hoj1y")]
+position = Vector2(851, 350)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals210" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals211" parent="GrpPNJ" unique_id=1198345539 instance=ExtResource("6_hoj1y")]
+position = Vector2(770, 348)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals211" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals212" parent="GrpPNJ" unique_id=1551179630 instance=ExtResource("6_hoj1y")]
+position = Vector2(630, 347)
+
+[node name="Animals213" parent="GrpPNJ" unique_id=1477063513 instance=ExtResource("6_hoj1y")]
+position = Vector2(851, 263)
+
+[node name="Animals214" parent="GrpPNJ" unique_id=1946117350 instance=ExtResource("6_hoj1y")]
+position = Vector2(791, 417)
+
+[node name="Animals215" parent="GrpPNJ" unique_id=164279338 instance=ExtResource("6_hoj1y")]
+position = Vector2(776, 261)
+
+[node name="Animals216" parent="GrpPNJ" unique_id=1647976722 instance=ExtResource("6_hoj1y")]
+position = Vector2(704, 345)
+
+[node name="Animals217" parent="GrpPNJ" unique_id=661926593 instance=ExtResource("6_hoj1y")]
+position = Vector2(340, 151)
+
+[node name="Animals218" parent="GrpPNJ" unique_id=1477945282 instance=ExtResource("6_hoj1y")]
+position = Vector2(826, 166)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals218" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals219" parent="GrpPNJ" unique_id=40175660 instance=ExtResource("6_hoj1y")]
+position = Vector2(661, 240)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals219" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals220" parent="GrpPNJ" unique_id=1818133004 instance=ExtResource("6_hoj1y")]
+position = Vector2(717, 402)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals220" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals221" parent="GrpPNJ" unique_id=990559915 instance=ExtResource("6_hoj1y")]
+position = Vector2(727, 241)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals221" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals222" parent="GrpPNJ" unique_id=585481656 instance=ExtResource("6_hoj1y")]
+position = Vector2(883, 333)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals222" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals223" parent="GrpPNJ" unique_id=616972728 instance=ExtResource("6_hoj1y")]
+position = Vector2(802, 331)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals223" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals224" parent="GrpPNJ" unique_id=812461304 instance=ExtResource("6_hoj1y")]
+position = Vector2(662, 330)
+
+[node name="Animals225" parent="GrpPNJ" unique_id=1072194680 instance=ExtResource("6_hoj1y")]
+position = Vector2(883, 246)
+
+[node name="Animals226" parent="GrpPNJ" unique_id=666272922 instance=ExtResource("6_hoj1y")]
+position = Vector2(823, 400)
+
+[node name="Animals227" parent="GrpPNJ" unique_id=1013660727 instance=ExtResource("6_hoj1y")]
+position = Vector2(808, 244)
+
+[node name="Animals228" parent="GrpPNJ" unique_id=752397085 instance=ExtResource("6_hoj1y")]
+position = Vector2(736, 328)
+
+[node name="Animals229" parent="GrpPNJ" unique_id=1172436002 instance=ExtResource("6_hoj1y")]
+position = Vector2(789, 201)
+
+[node name="Animals230" parent="GrpPNJ" unique_id=1830001325 instance=ExtResource("6_hoj1y")]
+position = Vector2(885, 201)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals230" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals231" parent="GrpPNJ" unique_id=881121580 instance=ExtResource("6_hoj1y")]
+position = Vector2(720, 275)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals231" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals232" parent="GrpPNJ" unique_id=1271685540 instance=ExtResource("6_hoj1y")]
+position = Vector2(776, 437)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals232" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals233" parent="GrpPNJ" unique_id=170297792 instance=ExtResource("6_hoj1y")]
+position = Vector2(786, 276)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals233" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals234" parent="GrpPNJ" unique_id=533750342 instance=ExtResource("6_hoj1y")]
+position = Vector2(942, 368)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals234" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals235" parent="GrpPNJ" unique_id=427938303 instance=ExtResource("6_hoj1y")]
+position = Vector2(861, 366)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals235" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals236" parent="GrpPNJ" unique_id=1158661299 instance=ExtResource("6_hoj1y")]
+position = Vector2(721, 365)
+
+[node name="Animals237" parent="GrpPNJ" unique_id=822473908 instance=ExtResource("6_hoj1y")]
+position = Vector2(942, 281)
+
+[node name="Animals238" parent="GrpPNJ" unique_id=180163414 instance=ExtResource("6_hoj1y")]
+position = Vector2(882, 435)
+
+[node name="Animals239" parent="GrpPNJ" unique_id=842885300 instance=ExtResource("6_hoj1y")]
+position = Vector2(867, 279)
+
+[node name="Animals240" parent="GrpPNJ" unique_id=367447514 instance=ExtResource("6_hoj1y")]
+position = Vector2(795, 363)
+
+[node name="Animals241" parent="GrpPNJ" unique_id=604022090 instance=ExtResource("6_hoj1y")]
+position = Vector2(802, 218)
+
+[node name="Animals242" parent="GrpPNJ" unique_id=1052692897 instance=ExtResource("6_hoj1y")]
+position = Vector2(898, 218)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals242" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals243" parent="GrpPNJ" unique_id=668601433 instance=ExtResource("6_hoj1y")]
+position = Vector2(733, 292)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals243" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals244" parent="GrpPNJ" unique_id=1511724642 instance=ExtResource("6_hoj1y")]
+position = Vector2(789, 454)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals244" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals245" parent="GrpPNJ" unique_id=688897128 instance=ExtResource("6_hoj1y")]
+position = Vector2(799, 293)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals245" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals246" parent="GrpPNJ" unique_id=1749825649 instance=ExtResource("6_hoj1y")]
+position = Vector2(955, 385)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals246" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals247" parent="GrpPNJ" unique_id=155436355 instance=ExtResource("6_hoj1y")]
+position = Vector2(874, 383)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals247" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals248" parent="GrpPNJ" unique_id=53012677 instance=ExtResource("6_hoj1y")]
+position = Vector2(734, 382)
+
+[node name="Animals249" parent="GrpPNJ" unique_id=943998005 instance=ExtResource("6_hoj1y")]
+position = Vector2(955, 298)
+
+[node name="Animals250" parent="GrpPNJ" unique_id=524771042 instance=ExtResource("6_hoj1y")]
+position = Vector2(895, 452)
+
+[node name="Animals251" parent="GrpPNJ" unique_id=131972612 instance=ExtResource("6_hoj1y")]
+position = Vector2(880, 296)
+
+[node name="Animals252" parent="GrpPNJ" unique_id=1655233394 instance=ExtResource("6_hoj1y")]
+position = Vector2(808, 380)
+
+[node name="Animals253" parent="GrpPNJ" unique_id=1835464971 instance=ExtResource("6_hoj1y")]
+position = Vector2(836, 228)
+
+[node name="Animals254" parent="GrpPNJ" unique_id=1730712914 instance=ExtResource("6_hoj1y")]
+position = Vector2(932, 228)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals254" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals255" parent="GrpPNJ" unique_id=1604862813 instance=ExtResource("6_hoj1y")]
+position = Vector2(767, 302)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals255" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals256" parent="GrpPNJ" unique_id=486408615 instance=ExtResource("6_hoj1y")]
+position = Vector2(823, 464)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals256" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals257" parent="GrpPNJ" unique_id=701646791 instance=ExtResource("6_hoj1y")]
+position = Vector2(833, 303)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals257" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals258" parent="GrpPNJ" unique_id=2036860012 instance=ExtResource("6_hoj1y")]
+position = Vector2(989, 395)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals258" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals259" parent="GrpPNJ" unique_id=1455502454 instance=ExtResource("6_hoj1y")]
+position = Vector2(908, 393)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals259" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals260" parent="GrpPNJ" unique_id=454698468 instance=ExtResource("6_hoj1y")]
+position = Vector2(768, 392)
+
+[node name="Animals261" parent="GrpPNJ" unique_id=490071223 instance=ExtResource("6_hoj1y")]
+position = Vector2(989, 308)
+
+[node name="Animals262" parent="GrpPNJ" unique_id=1704259096 instance=ExtResource("6_hoj1y")]
+position = Vector2(929, 462)
+
+[node name="Animals263" parent="GrpPNJ" unique_id=1300742956 instance=ExtResource("6_hoj1y")]
+position = Vector2(914, 306)
+
+[node name="Animals264" parent="GrpPNJ" unique_id=815879173 instance=ExtResource("6_hoj1y")]
+position = Vector2(842, 390)
+
+[node name="Animals265" parent="GrpPNJ" unique_id=1578313982 instance=ExtResource("6_hoj1y")]
+position = Vector2(874, 259)
+
+[node name="Animals266" parent="GrpPNJ" unique_id=1021711348 instance=ExtResource("6_hoj1y")]
+position = Vector2(970, 259)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals266" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals267" parent="GrpPNJ" unique_id=942349671 instance=ExtResource("6_hoj1y")]
+position = Vector2(805, 333)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals267" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals268" parent="GrpPNJ" unique_id=507659319 instance=ExtResource("6_hoj1y")]
+position = Vector2(861, 495)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals268" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="CollisionShape2D2" parent="GrpPNJ/Animals268/Area2D" parent_id_path=PackedInt32Array(507659319, 1896898488) index="0" unique_id=1745451244]
+position = Vector2(-603, -219)
+
+[node name="Animals269" parent="GrpPNJ" unique_id=1510580288 instance=ExtResource("6_hoj1y")]
+position = Vector2(871, 334)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals269" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals270" parent="GrpPNJ" unique_id=1331005164 instance=ExtResource("6_hoj1y")]
+position = Vector2(1027, 426)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals270" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="CollisionShape2D2" parent="GrpPNJ/Animals270/Area2D" parent_id_path=PackedInt32Array(1331005164, 1896898488) index="0" unique_id=1745451244]
+position = Vector2(-327, 41)
+
+[node name="Animals271" parent="GrpPNJ" unique_id=1800336164 instance=ExtResource("6_hoj1y")]
+position = Vector2(946, 424)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals271" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals272" parent="GrpPNJ" unique_id=1762813157 instance=ExtResource("6_hoj1y")]
+position = Vector2(806, 423)
+
+[node name="Animals273" parent="GrpPNJ" unique_id=1167101846 instance=ExtResource("6_hoj1y")]
+position = Vector2(1027, 339)
+
+[node name="Animals274" parent="GrpPNJ" unique_id=936481104 instance=ExtResource("6_hoj1y")]
+position = Vector2(155, 249)
+
+[node name="Animals275" parent="GrpPNJ" unique_id=1982819247 instance=ExtResource("6_hoj1y")]
+position = Vector2(952, 337)
+
+[node name="Animals276" parent="GrpPNJ" unique_id=2046336273 instance=ExtResource("6_hoj1y")]
+position = Vector2(880, 421)
+
+[node name="Animals277" parent="GrpPNJ" unique_id=325048551 instance=ExtResource("6_hoj1y")]
+position = Vector2(829, 269)
+
+[node name="Animals278" parent="GrpPNJ" unique_id=2062647728 instance=ExtResource("6_hoj1y")]
+position = Vector2(925, 269)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals278" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals279" parent="GrpPNJ" unique_id=1599892331 instance=ExtResource("6_hoj1y")]
+position = Vector2(760, 343)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals279" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals280" parent="GrpPNJ" unique_id=128699021 instance=ExtResource("6_hoj1y")]
+position = Vector2(816, 505)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals280" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="CollisionShape2D" parent="GrpPNJ/Animals280" index="1" unique_id=1493018327]
+position = Vector2(-67, -225)
+
+[node name="Area2D" parent="GrpPNJ/Animals280" index="2" unique_id=1896898488]
+position = Vector2(-68, -26)
+
+[node name="CollisionShape2D2" parent="GrpPNJ/Animals280/Area2D" index="0" unique_id=1745451244]
+position = Vector2(-560, -229)
+
+[node name="Animals281" parent="GrpPNJ" unique_id=400339250 instance=ExtResource("6_hoj1y")]
+position = Vector2(826, 344)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals281" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals282" parent="GrpPNJ" unique_id=2039036770 instance=ExtResource("6_hoj1y")]
+position = Vector2(982, 436)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals282" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals283" parent="GrpPNJ" unique_id=2088609545 instance=ExtResource("6_hoj1y")]
+position = Vector2(901, 434)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals283" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals284" parent="GrpPNJ" unique_id=171222433 instance=ExtResource("6_hoj1y")]
+position = Vector2(761, 433)
+
+[node name="Animals285" parent="GrpPNJ" unique_id=1577563185 instance=ExtResource("6_hoj1y")]
+position = Vector2(982, 349)
+
+[node name="Animals286" parent="GrpPNJ" unique_id=2065111220 instance=ExtResource("6_hoj1y")]
+position = Vector2(123, 256)
+
+[node name="Animals287" parent="GrpPNJ" unique_id=596747373 instance=ExtResource("6_hoj1y")]
+position = Vector2(907, 347)
+
+[node name="Animals288" parent="GrpPNJ" unique_id=831799558 instance=ExtResource("6_hoj1y")]
+position = Vector2(835, 431)
+
+[node name="Animals289" parent="GrpPNJ" unique_id=476183954 instance=ExtResource("6_hoj1y")]
+position = Vector2(871, 210)
+
+[node name="Animals290" parent="GrpPNJ" unique_id=225811616 instance=ExtResource("6_hoj1y")]
+position = Vector2(967, 210)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals290" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals291" parent="GrpPNJ" unique_id=1877462297 instance=ExtResource("6_hoj1y")]
+position = Vector2(802, 284)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals291" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals292" parent="GrpPNJ" unique_id=2057482428 instance=ExtResource("6_hoj1y")]
+position = Vector2(858, 446)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals292" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals293" parent="GrpPNJ" unique_id=740494435 instance=ExtResource("6_hoj1y")]
+position = Vector2(868, 285)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals293" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals294" parent="GrpPNJ" unique_id=1001805131 instance=ExtResource("6_hoj1y")]
+position = Vector2(1024, 377)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals294" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals295" parent="GrpPNJ" unique_id=1496118334 instance=ExtResource("6_hoj1y")]
+position = Vector2(943, 375)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals295" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals296" parent="GrpPNJ" unique_id=1982732673 instance=ExtResource("6_hoj1y")]
+position = Vector2(803, 374)
+
+[node name="Animals297" parent="GrpPNJ" unique_id=1268213242 instance=ExtResource("6_hoj1y")]
+position = Vector2(1024, 290)
+
+[node name="Animals298" parent="GrpPNJ" unique_id=1586121874 instance=ExtResource("6_hoj1y")]
+position = Vector2(964, 444)
+
+[node name="Animals299" parent="GrpPNJ" unique_id=1730290924 instance=ExtResource("6_hoj1y")]
+position = Vector2(949, 288)
+
+[node name="Animals300" parent="GrpPNJ" unique_id=39440027 instance=ExtResource("6_hoj1y")]
+position = Vector2(877, 372)
+
+[node name="Animals301" parent="GrpPNJ" unique_id=1089124419 instance=ExtResource("6_hoj1y")]
+position = Vector2(871, 210)
+
+[node name="Animals302" parent="GrpPNJ" unique_id=690997759 instance=ExtResource("6_hoj1y")]
+position = Vector2(967, 210)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals302" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="CollisionShape2D2" parent="GrpPNJ/Animals302/Area2D" parent_id_path=PackedInt32Array(690997759, 1896898488) index="0" unique_id=1745451244]
+position = Vector2(-165, -66)
+
+[node name="Animals303" parent="GrpPNJ" unique_id=539211053 instance=ExtResource("6_hoj1y")]
+position = Vector2(802, 284)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals303" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals304" parent="GrpPNJ" unique_id=1480838419 instance=ExtResource("6_hoj1y")]
+position = Vector2(858, 446)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals304" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals305" parent="GrpPNJ" unique_id=397906906 instance=ExtResource("6_hoj1y")]
+position = Vector2(868, 285)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals305" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals306" parent="GrpPNJ" unique_id=689332820 instance=ExtResource("6_hoj1y")]
+position = Vector2(1024, 377)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals306" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals307" parent="GrpPNJ" unique_id=760019063 instance=ExtResource("6_hoj1y")]
+position = Vector2(943, 375)
+animal_type = "Fromage"
+
+[node name="Sprite2D" parent="GrpPNJ/Animals307" index="0" unique_id=1329254734]
+frame = 1
+
+[node name="Animals308" parent="GrpPNJ" unique_id=1770793144 instance=ExtResource("6_hoj1y")]
+position = Vector2(803, 374)
+
+[node name="Animals309" parent="GrpPNJ" unique_id=1862799000 instance=ExtResource("6_hoj1y")]
+position = Vector2(302, 152)
+
+[node name="Animals310" parent="GrpPNJ" unique_id=365103436 instance=ExtResource("6_hoj1y")]
+position = Vector2(964, 444)
+
+[node name="Animals311" parent="GrpPNJ" unique_id=787960809 instance=ExtResource("6_hoj1y")]
+position = Vector2(949, 288)
+
+[node name="Animals312" parent="GrpPNJ" unique_id=446064432 instance=ExtResource("6_hoj1y")]
+position = Vector2(877, 372)
+
+[node name="GrpBckground" type="Node" parent="." unique_id=363279919]
+
+[node name="Herbe1_300x8" type="Sprite2D" parent="GrpBckground" unique_id=644038217]
+z_index = -1
+position = Vector2(188.5, 138.50002)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_0y6jj")
+metadata/_edit_lock_ = true
+
+[node name="Herbe2_300x8" type="Sprite2D" parent="GrpBckground" unique_id=943249552]
+z_index = -1
+position = Vector2(579, 136)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_vulay")
+metadata/_edit_lock_ = true
+
+[node name="Herbe1_300x9" type="Sprite2D" parent="GrpBckground" unique_id=1447941898]
+z_index = -1
+position = Vector2(188.5, 519.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_0y6jj")
+metadata/_edit_lock_ = true
+
+[node name="Herbe2_300x9" type="Sprite2D" parent="GrpBckground" unique_id=1468612175]
+z_index = -1
+position = Vector2(578.5, 519.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_vulay")
+metadata/_edit_lock_ = true
+
+[node name="Herbe1_300x10" type="Sprite2D" parent="GrpBckground" unique_id=1330737313]
+z_index = -1
+position = Vector2(965.99994, 140.00003)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_0y6jj")
+metadata/_edit_lock_ = true
+
+[node name="Herbe2_300x10" type="Sprite2D" parent="GrpBckground" unique_id=1898562127]
+z_index = -1
+position = Vector2(968.50006, 529.50006)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_vulay")
+metadata/_edit_lock_ = true
+
+[node name="Mask" parent="." unique_id=239077444 instance=ExtResource("9_1k73j")]
+position = Vector2(49, 557)
+mask_type = "Souris"
+
+[node name="Mask3" parent="." unique_id=1765471995 instance=ExtResource("9_1k73j")]
+position = Vector2(49, 471)
+mask_type = "Souris"
+
+[node name="Mask4" parent="." unique_id=545491534 instance=ExtResource("9_1k73j")]
+position = Vector2(49, 384)
+mask_type = "Souris"
+
+[node name="Mask5" parent="." unique_id=1562263362 instance=ExtResource("9_1k73j")]
+position = Vector2(49, 299)
+mask_type = "Souris"
+
+[node name="Mask2" parent="." unique_id=1095344375 instance=ExtResource("9_1k73j")]
+position = Vector2(1109, 557)
+
+[node name="Mask6" parent="." unique_id=887452921 instance=ExtResource("9_1k73j")]
+position = Vector2(1109, 471)
+
+[node name="Mask7" parent="." unique_id=1954347034 instance=ExtResource("9_1k73j")]
+position = Vector2(1109, 384)
+
+[node name="Mask8" parent="." unique_id=558237194 instance=ExtResource("9_1k73j")]
+position = Vector2(1109, 299)
+
+[node name="Crédits_300x8" type="Sprite2D" parent="." unique_id=834741675]
+position = Vector2(574, 329)
+scale = Vector2(0.28455994, 0.28455994)
+texture = ExtResource("8_sdkrb")
+metadata/_edit_lock_ = true
+
+[editable path="GrpPNJ/Animals3"]
+[editable path="GrpPNJ/Animals7"]
+[editable path="GrpPNJ/Animals8"]
+[editable path="GrpPNJ/Animals9"]
+[editable path="GrpPNJ/Animals6"]
+[editable path="GrpPNJ/Animals12"]
+[editable path="GrpPNJ/Animals14"]
+[editable path="GrpPNJ/Animals15"]
+[editable path="GrpPNJ/Animals16"]
+[editable path="GrpPNJ/Animals17"]
+[editable path="GrpPNJ/Animals18"]
+[editable path="GrpPNJ/Animals19"]
+[editable path="GrpPNJ/Animals26"]
+[editable path="GrpPNJ/Animals27"]
+[editable path="GrpPNJ/Animals28"]
+[editable path="GrpPNJ/Animals29"]
+[editable path="GrpPNJ/Animals30"]
+[editable path="GrpPNJ/Animals31"]
+[editable path="GrpPNJ/Animals38"]
+[editable path="GrpPNJ/Animals39"]
+[editable path="GrpPNJ/Animals40"]
+[editable path="GrpPNJ/Animals41"]
+[editable path="GrpPNJ/Animals42"]
+[editable path="GrpPNJ/Animals43"]
+[editable path="GrpPNJ/Animals50"]
+[editable path="GrpPNJ/Animals51"]
+[editable path="GrpPNJ/Animals52"]
+[editable path="GrpPNJ/Animals53"]
+[editable path="GrpPNJ/Animals54"]
+[editable path="GrpPNJ/Animals55"]
+[editable path="GrpPNJ/Animals62"]
+[editable path="GrpPNJ/Animals63"]
+[editable path="GrpPNJ/Animals64"]
+[editable path="GrpPNJ/Animals65"]
+[editable path="GrpPNJ/Animals66"]
+[editable path="GrpPNJ/Animals67"]
+[editable path="GrpPNJ/Animals74"]
+[editable path="GrpPNJ/Animals75"]
+[editable path="GrpPNJ/Animals76"]
+[editable path="GrpPNJ/Animals77"]
+[editable path="GrpPNJ/Animals78"]
+[editable path="GrpPNJ/Animals79"]
+[editable path="GrpPNJ/Animals86"]
+[editable path="GrpPNJ/Animals87"]
+[editable path="GrpPNJ/Animals88"]
+[editable path="GrpPNJ/Animals89"]
+[editable path="GrpPNJ/Animals90"]
+[editable path="GrpPNJ/Animals91"]
+[editable path="GrpPNJ/Animals98"]
+[editable path="GrpPNJ/Animals99"]
+[editable path="GrpPNJ/Animals100"]
+[editable path="GrpPNJ/Animals101"]
+[editable path="GrpPNJ/Animals102"]
+[editable path="GrpPNJ/Animals103"]
+[editable path="GrpPNJ/Animals110"]
+[editable path="GrpPNJ/Animals111"]
+[editable path="GrpPNJ/Animals112"]
+[editable path="GrpPNJ/Animals113"]
+[editable path="GrpPNJ/Animals114"]
+[editable path="GrpPNJ/Animals115"]
+[editable path="GrpPNJ/Animals122"]
+[editable path="GrpPNJ/Animals123"]
+[editable path="GrpPNJ/Animals124"]
+[editable path="GrpPNJ/Animals125"]
+[editable path="GrpPNJ/Animals126"]
+[editable path="GrpPNJ/Animals127"]
+[editable path="GrpPNJ/Animals134"]
+[editable path="GrpPNJ/Animals135"]
+[editable path="GrpPNJ/Animals136"]
+[editable path="GrpPNJ/Animals137"]
+[editable path="GrpPNJ/Animals138"]
+[editable path="GrpPNJ/Animals139"]
+[editable path="GrpPNJ/Animals146"]
+[editable path="GrpPNJ/Animals147"]
+[editable path="GrpPNJ/Animals148"]
+[editable path="GrpPNJ/Animals149"]
+[editable path="GrpPNJ/Animals150"]
+[editable path="GrpPNJ/Animals151"]
+[editable path="GrpPNJ/Animals158"]
+[editable path="GrpPNJ/Animals159"]
+[editable path="GrpPNJ/Animals160"]
+[editable path="GrpPNJ/Animals161"]
+[editable path="GrpPNJ/Animals162"]
+[editable path="GrpPNJ/Animals163"]
+[editable path="GrpPNJ/Animals170"]
+[editable path="GrpPNJ/Animals171"]
+[editable path="GrpPNJ/Animals172"]
+[editable path="GrpPNJ/Animals173"]
+[editable path="GrpPNJ/Animals174"]
+[editable path="GrpPNJ/Animals175"]
+[editable path="GrpPNJ/Animals182"]
+[editable path="GrpPNJ/Animals183"]
+[editable path="GrpPNJ/Animals184"]
+[editable path="GrpPNJ/Animals185"]
+[editable path="GrpPNJ/Animals186"]
+[editable path="GrpPNJ/Animals187"]
+[editable path="GrpPNJ/Animals194"]
+[editable path="GrpPNJ/Animals195"]
+[editable path="GrpPNJ/Animals196"]
+[editable path="GrpPNJ/Animals197"]
+[editable path="GrpPNJ/Animals198"]
+[editable path="GrpPNJ/Animals199"]
+[editable path="GrpPNJ/Animals206"]
+[editable path="GrpPNJ/Animals207"]
+[editable path="GrpPNJ/Animals208"]
+[editable path="GrpPNJ/Animals209"]
+[editable path="GrpPNJ/Animals210"]
+[editable path="GrpPNJ/Animals211"]
+[editable path="GrpPNJ/Animals218"]
+[editable path="GrpPNJ/Animals219"]
+[editable path="GrpPNJ/Animals220"]
+[editable path="GrpPNJ/Animals221"]
+[editable path="GrpPNJ/Animals222"]
+[editable path="GrpPNJ/Animals223"]
+[editable path="GrpPNJ/Animals230"]
+[editable path="GrpPNJ/Animals231"]
+[editable path="GrpPNJ/Animals232"]
+[editable path="GrpPNJ/Animals233"]
+[editable path="GrpPNJ/Animals234"]
+[editable path="GrpPNJ/Animals235"]
+[editable path="GrpPNJ/Animals242"]
+[editable path="GrpPNJ/Animals243"]
+[editable path="GrpPNJ/Animals244"]
+[editable path="GrpPNJ/Animals245"]
+[editable path="GrpPNJ/Animals246"]
+[editable path="GrpPNJ/Animals247"]
+[editable path="GrpPNJ/Animals254"]
+[editable path="GrpPNJ/Animals255"]
+[editable path="GrpPNJ/Animals256"]
+[editable path="GrpPNJ/Animals257"]
+[editable path="GrpPNJ/Animals258"]
+[editable path="GrpPNJ/Animals259"]
+[editable path="GrpPNJ/Animals266"]
+[editable path="GrpPNJ/Animals267"]
+[editable path="GrpPNJ/Animals268"]
+[editable path="GrpPNJ/Animals269"]
+[editable path="GrpPNJ/Animals270"]
+[editable path="GrpPNJ/Animals271"]
+[editable path="GrpPNJ/Animals278"]
+[editable path="GrpPNJ/Animals279"]
+[editable path="GrpPNJ/Animals280"]
+[editable path="GrpPNJ/Animals281"]
+[editable path="GrpPNJ/Animals282"]
+[editable path="GrpPNJ/Animals283"]
+[editable path="GrpPNJ/Animals290"]
+[editable path="GrpPNJ/Animals291"]
+[editable path="GrpPNJ/Animals292"]
+[editable path="GrpPNJ/Animals293"]
+[editable path="GrpPNJ/Animals294"]
+[editable path="GrpPNJ/Animals295"]
+[editable path="GrpPNJ/Animals302"]
+[editable path="GrpPNJ/Animals303"]
+[editable path="GrpPNJ/Animals304"]
+[editable path="GrpPNJ/Animals305"]
+[editable path="GrpPNJ/Animals306"]
+[editable path="GrpPNJ/Animals307"]
