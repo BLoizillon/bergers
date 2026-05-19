@@ -25,7 +25,7 @@ animal_type = "Chat"
 
 [node name="GrpEnclos" type="Node" parent="." unique_id=655392166]
 script = ExtResource("2_gy5r3")
-next_level_path = "res://level_2.tscn"
+next_level_path = "res://Levels/level_7.tscn"
 
 [node name="Paddock" parent="GrpEnclos" unique_id=1888835191 instance=ExtResource("3_5q244")]
 position = Vector2(426, 17)

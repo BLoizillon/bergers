@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://br42s7j4mbp0b" path="res://player.tscn" id="1_krg5q"]
 [ext_resource type="Script" uid="uid://c3gd2afgti2yh" path="res://victory.gd" id="2_gljo5"]
-[ext_resource type="PackedScene" path="res://Walls/wall_basic.tscn" id="4_iv344"]
 [ext_resource type="PackedScene" uid="uid://cbdv820rg3who" path="res://animals.tscn" id="6_hoj1y"]
 [ext_resource type="Texture2D" uid="uid://ddcyg7o4tcomo" path="res://Assets/Herbe_1@300x-8.png" id="7_0y6jj"]
 [ext_resource type="Texture2D" uid="uid://wdti4c427mim" path="res://Crédits@300x-8.png" id="8_sdkrb"]
@@ -24,25 +23,6 @@ script = ExtResource("2_gljo5")
 next_level_path = "res://level_2.tscn"
 
 [node name="GrpWall" type="Node" parent="." unique_id=472281946]
-
-[node name="Invisible_Wall" parent="GrpWall" unique_id=360388285 instance=ExtResource("4_iv344")]
-position = Vector2(1174, 341)
-rotation = -1.5707964
-scale = Vector2(6.600001, 1)
-
-[node name="Invisible_Wall2" parent="GrpWall" unique_id=579604825 instance=ExtResource("4_iv344")]
-position = Vector2(-24, 327)
-rotation = 1.5707964
-scale = Vector2(6.5599985, 1)
-
-[node name="Invisible_Wall3" parent="GrpWall" unique_id=85335178 instance=ExtResource("4_iv344")]
-position = Vector2(582, -17)
-rotation = 3.1415927
-scale = Vector2(10.080002, 1)
-
-[node name="Invisible_Wall4" parent="GrpWall" unique_id=1418254105 instance=ExtResource("4_iv344")]
-position = Vector2(574, 668)
-scale = Vector2(10.080002, 1)
 
 [node name="GrpPNJ" type="Node" parent="." unique_id=1839669559]
 
